@@ -17,8 +17,8 @@ frontend/.env.local
 
 # Local Database & Media Uploads
 backend/database.json
-backend/public/uploads/*
-!backend/public/uploads/.gitkeep
+# backend/public/uploads/*
+# !backend/public/uploads/.gitkeep
 images/
 
 # System / IDE files
