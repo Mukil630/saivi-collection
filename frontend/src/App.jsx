@@ -4,9 +4,11 @@ import './App.css';
 // Fallback products data matching the SAVI'S collection storefront HTML structure
 const fallbackProducts = [];
 
-const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-  ? 'http://localhost:5000'
-  : `http://${window.location.hostname}:5000`;
+const API_BASE_URL = import.meta.env.VITE_API_URL || (
+  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:5000'
+    : `http://${window.location.hostname}:5000`
+);
 
 const COLLECTIONS = [
   { name: '🔥 BIG COMBO SALE', img: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=80', href: '#new-arrivals' },
