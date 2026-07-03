@@ -90,18 +90,23 @@ app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 
 // Serve React production build statically if it exists
 const distPath = path.join(__dirname, '..', 'frontend', 'dist');
+
 if (fs.existsSync(distPath)) {
   app.use(express.static(distPath));
-  // Serve React's index.html for any frontend client-side routing
+
   app.get('*', (req, res, next) => {
     if (req.url.startsWith('/api')) {
-      return next(); // Pass API routes to the API handlers
+      return next();
     }
     res.sendFile(path.join(distPath, 'index.html'));
   });
+
 } else {
-  // Fallback to local public folder if frontend is not built
-  app.use(express.static(path.join(__dirname, 'public')));
+
+  app.get('/', (req, res) => {
+    res.send('Server is running');
+  });
+
 }
 
 // --- Admin Authentication Middleware & Login ---
