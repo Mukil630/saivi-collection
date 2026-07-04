@@ -12,7 +12,6 @@ import { uploadImageToCloudinary, uploadLocalFileToCloudinary } from './cloudina
 import { uploadToFirebaseStorage } from './firebase.js';
 
 dotenv.config();
-initDb();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -36,6 +35,16 @@ app.use((req, res, next) => {
   res.setHeader('X-XSS-Protection', '1; mode=block');
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   next();
+});
+
+// --- Health check endpoint (Railway / uptime monitors hit this) ---
+// Placed BEFORE initDb() runs so it's registered immediately, and kept
+// dependency-free so it responds even if the DB connection is slow/down.
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', uptime: process.uptime() });
+});
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok', uptime: process.uptime() });
 });
 
 // --- In-Memory Admin Login Rate Limiter (Brute-Force Protection) ---
@@ -998,7 +1007,17 @@ app.post('/api/admin/reset-database', requireAdminAuth, async (req, res) => {
   }
 });
 
-// Start Express Server
-const server = app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// --- Start Express Server ---
+// Bind explicitly to 0.0.0.0 so Railway's health check can reach the app
+// regardless of which network interface it probes.
+const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// --- Initialize database AFTER the server is already listening ---
+// This means Railway's health check (/health) will get a 200 response
+// immediately, even if the DB connection is slow or briefly unavailable,
+// instead of the whole process failing to bind if initDb() throws.
+initDb().catch((err) => {
+  console.error("[DATABASE] Failed to initialize database:", err);
 });
