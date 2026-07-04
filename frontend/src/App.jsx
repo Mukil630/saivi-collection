@@ -594,6 +594,7 @@ function App() {
   // Admin Security & Session States
   const [adminToken, setAdminToken] = useState(localStorage.getItem('adminToken') || '');
   const [inlineEdit, setInlineEdit] = useState({ id: null, field: null, value: '' });
+  const [editingProductId, setEditingProductId] = useState(null);
   const [adminUsername, setAdminUsername] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
   const [adminLoginError, setAdminLoginError] = useState('');
@@ -1375,6 +1376,68 @@ function App() {
       const msg = `Hi SAVI'S collection! I just placed an order on your website (Offline).\n\n*Order ID:* ${mockId}\n*Total Amount:* Rs ${finalTotal.toLocaleString('en-IN')}\n*Payment Method:* ${paymentMethod}\n\n*Customer Details:*\nName: ${customerName}\nPhone: ${phone}\nAddress: ${address}\n\n*Items Ordered:*\n${offlineItemsWithImages}`;
       const waLink = `https://api.whatsapp.com/send?phone=919788633200&text=${encodeURIComponent(msg)}`;
       window.open(waLink, '_blank');
+    }
+  };
+
+  const handleSaveProduct = (e) => {
+    e.preventDefault();
+    if (editingProductId) {
+      handleUpdateProductDetails();
+    } else {
+      handleAddProduct(e);
+    }
+  };
+
+  const handleUpdateProductDetails = async () => {
+    const formattedProduct = {
+      ...newProduct,
+      price: parseFloat(newProduct.price),
+      oldPrice: newProduct.oldPrice ? parseFloat(newProduct.oldPrice) : null,
+      sizes: typeof newProduct.sizes === 'string' ? newProduct.sizes.split(',').map(s => s.trim()) : newProduct.sizes,
+      colors: typeof newProduct.colors === 'string' ? newProduct.colors.split(',').map(c => c.trim()) : newProduct.colors,
+    };
+
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/products/${editingProductId}`, {
+        method: 'PATCH',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${adminToken}`
+        },
+        body: JSON.stringify(formattedProduct)
+      });
+      
+      if (res.status === 401) {
+        handleAdminLogout();
+        return;
+      }
+      if (res.ok) {
+        triggerToast(`Updated product "${formattedProduct.name}"`);
+        setIsAddModalOpen(false);
+        setEditingProductId(null);
+        setNewProduct({
+          name: '',
+          price: '',
+          oldPrice: '',
+          image: '',
+          category: 'Co-ords',
+          description: '',
+          sizes: 'S, M, L, XL',
+          colors: 'Default',
+          stock: 20,
+          featured: false,
+          colorImages: {}
+        });
+        fetchStoreData();
+        fetchAdminData();
+      } else {
+        alert("Failed to update product.");
+      }
+    } catch (err) {
+      setProducts(products.map(p => p.id === editingProductId ? { ...p, ...formattedProduct } : p));
+      triggerToast("Offline Mode: Updated product locally.");
+      setIsAddModalOpen(false);
+      setEditingProductId(null);
     }
   };
 
@@ -3533,7 +3596,23 @@ function App() {
                   </h1>
                   <div className="admin-actions" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
                     {adminSubTab === 'products' && (
-                      <button className="btn btn-primary" onClick={() => setIsAddModalOpen(true)}>＋ Add New Product</button>
+                      <button className="btn btn-primary" onClick={() => { 
+                        setIsAddModalOpen(true); 
+                        setEditingProductId(null); 
+                        setNewProduct({
+                          name: '',
+                          price: '',
+                          oldPrice: '',
+                          image: '',
+                          category: 'Co-ords',
+                          description: '',
+                          sizes: 'S, M, L, XL',
+                          colors: 'Default',
+                          stock: 20,
+                          featured: false,
+                          colorImages: {}
+                        });
+                      }}>＋ Add New Product</button>
                     )}
                     <button 
                       onClick={() => setActiveTab('shop')} 
@@ -3950,6 +4029,29 @@ function App() {
                                 </div>
                               </td>
                               <td>
+                                <button 
+                                  onClick={() => {
+                                    setEditingProductId(p.id);
+                                    setNewProduct({
+                                      name: p.name || '',
+                                      price: p.price || '',
+                                      oldPrice: p.oldPrice || '',
+                                      image: p.image || '',
+                                      category: p.category || 'Co-ords',
+                                      description: p.description || '',
+                                      sizes: p.sizes ? p.sizes.join(', ') : 'S, M, L, XL',
+                                      colors: p.colors ? p.colors.join(', ') : 'Default',
+                                      stock: p.stock !== undefined ? p.stock : 20,
+                                      featured: !!p.featured,
+                                      colorImages: p.colorImages || {}
+                                    });
+                                    setIsAddModalOpen(true);
+                                  }}
+                                  className="btn btn-secondary"
+                                  style={{ padding: '6px 12px', fontSize: '12px', borderRadius: '4px', marginRight: '8px' }}
+                                >
+                                  Edit
+                                </button>
                                 <button 
                                   onClick={() => handleDeleteProduct(p.id)}
                                   className="btn btn-danger"
@@ -4887,11 +4989,11 @@ function App() {
         <div className="modal-overlay" style={{ zIndex: 1001 }} onClick={() => setIsAddModalOpen(false)}>
           <div className="modal-content glass" onClick={(e) => e.stopPropagation()} style={{ background: 'var(--surface)', color: 'var(--text-primary)', maxWidth: '500px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-              <h2 style={{ fontSize: '18px', fontWeight: '600', fontFamily: "'Playfair Display', serif" }}>Add New Apparel Product</h2>
+              <h2 style={{ fontSize: '18px', fontWeight: '600', fontFamily: "'Playfair Display', serif" }}>{editingProductId ? "Edit Product Details" : "Add New Apparel Product"}</h2>
               <button onClick={() => setIsAddModalOpen(false)} style={{ background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer' }}>✕</button>
             </div>
             
-            <form onSubmit={handleAddProduct} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <form onSubmit={handleSaveProduct} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div className="form-group">
                 <label style={{ display: 'block', fontSize: '11px', fontWeight: '600', marginBottom: '4px' }}>Product Name</label>
                 <input 
@@ -5072,7 +5174,7 @@ function App() {
               </div>
 
               <button type="submit" className="btn btn-primary" style={{ padding: '12px', marginTop: '10px', borderRadius: '4px' }}>
-                Create Product Listing
+                {editingProductId ? "Save Changes" : "Create Product Listing"}
               </button>
             </form>
           </div>
