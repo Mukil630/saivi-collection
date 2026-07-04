@@ -16,7 +16,6 @@
     "firebase": "^12.15.0",
     "googleapis": "^173.0.0",
     "mongoose": "^9.7.0",
-    "node-telegram-bot-api": "^0.66.0",
     "pg": "^8.21.0"
   },
   "devDependencies": {

@@ -344,11 +344,7 @@ tr:hover{background:rgba(0,0,0,.02);}
           <span class="icon">👕</span>Products
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="switchTab('telegram')">
-          <span class="icon">🤖</span>Telegram Bot
-        </a>
-      </li>
+
       <li class="nav-item" style="margin-top: 3rem;">
         <a href="storefront.html" class="nav-link" style="border-left-color: transparent; background: rgba(255,255,255,0.05);">
           <span class="icon">🛒</span>View Storefront
@@ -464,43 +460,7 @@ tr:hover{background:rgba(0,0,0,.02);}
       </div>
     </div>
 
-    <!-- VIEW 4: TELEGRAM BOT GUIDE -->
-    <div id="telegram-tab" class="tab-content">
-      <div class="guide-card">
-        <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">Telegram Integration Setup</h2>
-        
-        <div class="guide-step">
-          <h3>Step 1: Create Your Bot</h3>
-          <p>Search for <strong>@BotFather</strong> on Telegram and send the command <code>/newbot</code>. Follow the prompts to set your bot's name and username. Copy the <strong>HTTP API Token</strong> provided.</p>
-        </div>
 
-        <div class="guide-step">
-          <h3>Step 2: Configure Environment Variables</h3>
-          <p>Open <code>backend/.env</code> in your project folder and add your bot token:</p>
-          <div class="code-block">
-            PORT=5000<br>
-            TELEGRAM_BOT_TOKEN=123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ
-          </div>
-          <p>Restart the server to activate the bot connector.</p>
-        </div>
-
-        <div class="guide-step">
-          <h3>Step 3: Admin Registration</h3>
-          <p>Start a conversation with your bot in Telegram and send the command <code>/auth</code>. The bot will save your Chat ID and notify you of order checkout alerts in real-time!</p>
-        </div>
-
-        <div class="guide-step">
-          <h3>Step 4: Phone Catalog Management Commands</h3>
-          <p>Use these commands directly in Telegram chat to manage stock:</p>
-          <ul>
-            <li style="margin: 8px 0; font-size: 14px;"><strong><code>/addproduct</code></strong> — Triggers a step-by-step chat wizard to upload an image, name, description, category, and price.</li>
-            <li style="margin: 8px 0; font-size: 14px;"><strong><code>/list</code></strong> — View catalog items with IDs.</li>
-            <li style="margin: 8px 0; font-size: 14px;"><strong><code>/delete &lt;id&gt;</code></strong> — Remove product.</li>
-            <li style="margin: 8px 0; font-size: 14px;"><strong><code>/orders</code></strong> — List recent purchases.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
   </div>
 </div>
@@ -590,8 +550,7 @@ function switchTab(tabName) {
   const titles = {
     'dashboard': 'Analytics Dashboard',
     'orders': 'Orders Management',
-    'products': 'Product Catalog',
-    'telegram': 'Telegram Bot Config'
+    'products': 'Product Catalog'
   };
   document.getElementById('tab-title').textContent = titles[tabName] || 'Dashboard';
   

@@ -10,11 +10,9 @@ import { initDb, getProducts, addProduct, deleteProduct, addOrder, getOrders, up
 import { uploadImageToDrive } from './drive.js';
 import { uploadImageToCloudinary, uploadLocalFileToCloudinary } from './cloudinary.js';
 import { uploadToFirebaseStorage } from './firebase.js';
-import { initBot, notifyNewOrder } from './bot.js';
 
 dotenv.config();
 initDb();
-initBot();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -497,13 +495,6 @@ app.post('/api/orders', async (req, res) => {
       paymentStatus, 
       paymentDetails 
     });
-    
-    // Notify admin via Telegram Bot
-    try {
-      notifyNewOrder(order);
-    } catch (botErr) {
-      console.error("[BOT] Failed to send order notification:", botErr.message);
-    }
 
     // Notify admin via WhatsApp Bot
     try {
@@ -871,7 +862,6 @@ app.get('/api/admin/config', requireAdminAuth, (req, res) => {
     supabaseDbUrl: process.env.SUPABASE_DB_URL || '',
     googleDriveClientEmail: process.env.GOOGLE_DRIVE_CLIENT_EMAIL || '',
     googleDriveFolderId: process.env.GOOGLE_DRIVE_FOLDER_ID || '',
-    telegramBotToken: process.env.TELEGRAM_BOT_TOKEN || '',
     hasPrivateKey: !!process.env.GOOGLE_DRIVE_PRIVATE_KEY,
     cloudinaryUrl: process.env.CLOUDINARY_URL || '',
     cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME || '',
@@ -896,7 +886,6 @@ app.post('/api/admin/config', requireAdminAuth, async (req, res) => {
       supabaseDbUrl,
       googleDriveClientEmail, 
       googleDriveFolderId, 
-      telegramBotToken, 
       googleDrivePrivateKey, 
       adminUsername, 
       adminPassword, 
@@ -934,7 +923,6 @@ app.post('/api/admin/config', requireAdminAuth, async (req, res) => {
     if (supabaseDbUrl !== undefined) envVars['SUPABASE_DB_URL'] = supabaseDbUrl;
     if (googleDriveClientEmail !== undefined) envVars['GOOGLE_DRIVE_CLIENT_EMAIL'] = googleDriveClientEmail;
     if (googleDriveFolderId !== undefined) envVars['GOOGLE_DRIVE_FOLDER_ID'] = googleDriveFolderId;
-    if (telegramBotToken !== undefined) envVars['TELEGRAM_BOT_TOKEN'] = telegramBotToken;
     if (adminUsername !== undefined) envVars['ADMIN_USERNAME'] = adminUsername;
     if (adminPassword !== undefined && adminPassword !== '' && adminPassword !== '********') envVars['ADMIN_PASSWORD'] = adminPassword;
     if (merchantUpiId !== undefined) envVars['MERCHANT_UPI_ID'] = merchantUpiId;
