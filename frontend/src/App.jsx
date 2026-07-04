@@ -593,6 +593,7 @@ function App() {
 
   // Admin Security & Session States
   const [adminToken, setAdminToken] = useState(localStorage.getItem('adminToken') || '');
+  const [inlineEdit, setInlineEdit] = useState({ id: null, field: null, value: '' });
   const [adminUsername, setAdminUsername] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
   const [adminLoginError, setAdminLoginError] = useState('');
@@ -1624,6 +1625,43 @@ function App() {
     } catch (err) {
       setProducts(products.map(p => p.id === id ? { ...p, stock: parseInt(newStock) } : p));
       triggerToast("Offline Mode: Stock updated locally.");
+    }
+  };
+
+  const handleInlineEditSave = async (id, field, newValue) => {
+    if (field === 'name' && !newValue.trim()) {
+      setInlineEdit({ id: null, field: null, value: '' });
+      return;
+    }
+    
+    let parsedValue = newValue;
+    if (field === 'price' || field === 'oldPrice') {
+      parsedValue = parseFloat(newValue) || 0;
+    }
+
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/products/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${adminToken}`
+        },
+        body: JSON.stringify({ [field]: parsedValue })
+      });
+
+      if (res.ok) {
+        const updatedProd = await res.json();
+        setProducts(products.map(p => p.id === id ? { ...p, ...updatedProd } : p));
+        triggerToast(`Product ${field} updated successfully!`);
+      } else {
+        const errData = await res.json();
+        alert(`Failed to update: ${errData.error || 'Server error'}`);
+      }
+    } catch (err) {
+      setProducts(products.map(p => p.id === id ? { ...p, [field]: parsedValue } : p));
+      triggerToast("Offline Mode: Updated product locally.");
+    } finally {
+      setInlineEdit({ id: null, field: null, value: '' });
     }
   };
 
@@ -3813,11 +3851,71 @@ function App() {
                                 <img src={p.image} alt={p.name} style={{ width: '45px', height: '55px', objectFit: 'cover', borderRadius: '4px', background: 'var(--light)' }} />
                               </td>
                               <td style={{ fontWeight: '500', maxWidth: '280px', whiteSpace: 'normal' }}>
-                                {p.name}
+                                {inlineEdit.id === p.id && inlineEdit.field === 'name' ? (
+                                  <input
+                                    type="text"
+                                    value={inlineEdit.value}
+                                    onChange={(e) => setInlineEdit({ ...inlineEdit, value: e.target.value })}
+                                    onBlur={() => handleInlineEditSave(p.id, 'name', inlineEdit.value)}
+                                    onKeyDown={(e) => {
+                                      if (e.key === 'Enter') handleInlineEditSave(p.id, 'name', inlineEdit.value);
+                                      if (e.key === 'Escape') setInlineEdit({ id: null, field: null, value: '' });
+                                    }}
+                                    autoFocus
+                                    style={{
+                                      width: '100%',
+                                      padding: '6px',
+                                      border: '1px solid var(--primary)',
+                                      borderRadius: '4px',
+                                      background: 'var(--bg-dark)',
+                                      color: 'var(--text-primary)',
+                                      fontSize: '13px'
+                                    }}
+                                  />
+                                ) : (
+                                  <span 
+                                    onClick={() => setInlineEdit({ id: p.id, field: 'name', value: p.name })}
+                                    style={{ cursor: 'pointer', borderBottom: '1px dashed var(--border-color)', display: 'inline-block' }}
+                                    title="Click to edit name"
+                                  >
+                                    {p.name}
+                                  </span>
+                                )}
                                 {p.featured && <span className="badge badge-primary" style={{ marginLeft: '8px', fontSize: '8px' }}>Featured</span>}
                               </td>
                               <td>{p.category}</td>
-                              <td style={{ fontWeight: '600' }}>₹{p.price.toLocaleString('en-IN')}</td>
+                              <td style={{ fontWeight: '600' }}>
+                                {inlineEdit.id === p.id && inlineEdit.field === 'price' ? (
+                                  <input
+                                    type="number"
+                                    value={inlineEdit.value}
+                                    onChange={(e) => setInlineEdit({ ...inlineEdit, value: e.target.value })}
+                                    onBlur={() => handleInlineEditSave(p.id, 'price', inlineEdit.value)}
+                                    onKeyDown={(e) => {
+                                      if (e.key === 'Enter') handleInlineEditSave(p.id, 'price', inlineEdit.value);
+                                      if (e.key === 'Escape') setInlineEdit({ id: null, field: null, value: '' });
+                                    }}
+                                    autoFocus
+                                    style={{
+                                      width: '85px',
+                                      padding: '6px',
+                                      border: '1px solid var(--primary)',
+                                      borderRadius: '4px',
+                                      background: 'var(--bg-dark)',
+                                      color: 'var(--text-primary)',
+                                      fontSize: '13px'
+                                    }}
+                                  />
+                                ) : (
+                                  <span 
+                                    onClick={() => setInlineEdit({ id: p.id, field: 'price', value: p.price.toString() })}
+                                    style={{ cursor: 'pointer', borderBottom: '1px dashed var(--border-color)' }}
+                                    title="Click to edit price"
+                                  >
+                                    ₹{p.price.toLocaleString('en-IN')}
+                                  </span>
+                                )}
+                              </td>
                                <td style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
                                 <div style={{ marginBottom: '6px' }}>
                                   Sizes: {p.sizes ? p.sizes.join(', ') : 'Default'} · Colors: {p.colors ? p.colors.join(', ') : 'Default'}

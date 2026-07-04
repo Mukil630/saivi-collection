@@ -6,7 +6,7 @@ import path from 'path';
 import fs from 'fs';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
-import { initDb, getProducts, addProduct, deleteProduct, addOrder, getOrders, updateOrderStatus, updateOrderPaymentStatus, deleteOrder, getUsers, addUser, getInquiries, addInquiry, deleteInquiry, updateProductStock, resetDatabase, getReviews, addReview, getCartActivity, addCartActivity, getHomepageSections, saveHomepageSections } from './db.js';
+import { initDb, getProducts, addProduct, updateProduct, deleteProduct, addOrder, getOrders, updateOrderStatus, updateOrderPaymentStatus, deleteOrder, getUsers, addUser, getInquiries, addInquiry, deleteInquiry, updateProductStock, resetDatabase, getReviews, addReview, getCartActivity, addCartActivity, getHomepageSections, saveHomepageSections } from './db.js';
 import { uploadImageToDrive } from './drive.js';
 import { uploadImageToCloudinary, uploadLocalFileToCloudinary } from './cloudinary.js';
 import { uploadToFirebaseStorage } from './firebase.js';
@@ -637,6 +637,30 @@ app.patch('/api/products/:id/stock', requireAdminAuth, async (req, res) => {
       return res.status(400).json({ error: 'Stock value is required' });
     }
     const updated = await updateProductStock(req.params.id, stock);
+    if (!updated) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+    res.json(updated);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Update product fields (name, price, oldPrice, category, description, etc.)
+app.patch('/api/products/:id', requireAdminAuth, async (req, res) => {
+  try {
+    const body = sanitizeInput(req.body);
+    const { name, price, oldPrice, category, description, stock } = body;
+    
+    const updated = await updateProduct(req.params.id, { 
+      name, 
+      price, 
+      oldPrice, 
+      category, 
+      description, 
+      stock 
+    });
+    
     if (!updated) {
       return res.status(404).json({ error: 'Product not found' });
     }

@@ -218,6 +218,41 @@ export async function updateProductStock(id, newStock) {
   return null;
 }
 
+export async function updateProduct(id, fields) {
+  const setClauses = [];
+  const values = [];
+  let paramIdx = 1;
+
+  for (const [key, val] of Object.entries(fields)) {
+    if (val !== undefined) {
+      setClauses.push(`"${key}" = $${paramIdx}`);
+      if (key === 'price' || key === 'oldPrice') {
+        values.push(val !== null ? parseFloat(val) : null);
+      } else if (key === 'stock') {
+        values.push(parseInt(val) || 0);
+      } else {
+        values.push(val);
+      }
+      paramIdx++;
+    }
+  }
+
+  if (setClauses.length === 0) return null;
+
+  values.push(id);
+  const query = `UPDATE products SET ${setClauses.join(', ')} WHERE "id" = $${paramIdx} RETURNING *`;
+  
+  try {
+    const res = await pool.query(query, values);
+    if (res.rows.length > 0) {
+      return parseProduct(res.rows[0]);
+    }
+  } catch (err) {
+    console.error("Postgres updateProduct error:", err);
+  }
+  return null;
+}
+
 export async function deleteProduct(id) {
   try {
     const res = await pool.query('DELETE FROM products WHERE "id" = $1 RETURNING *', [id]);
