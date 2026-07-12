@@ -1,12 +1,16 @@
-# 🛍️ AURA | Premium Telegram-Managed Streetwear Store
+# 🛍️ SAVI'S COLLECTION | Premium E-Commerce Store
 
-AURA is an ultra-modern, glassmorphic clothing catalog website built using **Vite + React (Frontend)** and **Node.js Express (Backend)**, synchronized in real-time with a **Telegram Bot** for store inventory management.
+**SAVI'S COLLECTION** is an ultra-modern, glassmorphic clothing and jewellery catalog website built using **Vite + React (Frontend)** and **Node.js Express (Backend)**, connected in real-time with **Supabase PostgreSQL** and **Supabase Storage**.
+
+### 🔗 Live Production Links
+- **Storefront Website (Vercel):** [https://savis-collection-bice.vercel.app](https://savis-collection-bice.vercel.app)
+- **Backend API Server (Render):** [https://savis-collection-backend.onrender.com](https://savis-collection-backend.onrender.com)
 
 ## 🏗️ Architecture Design
 
-- **Vite + React Frontend:** Premium glassmorphic storefront featuring a catalog, categories, product details modal, cart drawer, checkout forms, and an interactive simulated Telegram bot phone preview.
-- **Express.js API Backend:** Exposes REST routes for products and order submissions, serves static assets (clothing images), and initializes the long-polling Telegram Bot manager.
-- **Telegram Bot Manager:** A conversational agent that parses photo uploads and metadata inputs to live-register clothing items directly into the shared JSON database.
+- **Vite + React Frontend:** Premium glassmorphic storefront featuring a catalog, categories, product details modal, cart drawer, checkout forms, and WhatsApp notification integration.
+- **Express.js API Backend:** Exposes REST routes for products, categories, orders, and inquiries, connected to Supabase.
+- **Supabase Cloud Integration:** Uses Supabase PostgreSQL for persistent database storage and Supabase Storage for fast CDN-delivered product images.
 
 ---
 
