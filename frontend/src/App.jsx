@@ -1,14 +1,369 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
+import productsData from './products.json';
+
+// --- DYNAMIC LIVE / DEMO MODE INTERCEPTOR CONTROL ---
+let isMockActive = false;
+if (typeof window !== 'undefined') {
+  const savedMock = localStorage.getItem('savi_use_mock_api');
+  if (savedMock !== null) {
+    isMockActive = savedMock === 'true';
+  } else {
+    // Default to Live API mode
+    isMockActive = false;
+    localStorage.setItem('savi_use_mock_api', 'false');
+  }
+  
+  // Cache self-healing logic
+  const cachedProducts = localStorage.getItem('mock_products');
+  if (cachedProducts && cachedProducts.includes('prod-female-kurti-1') && cachedProducts.includes('1JZjlEcQybdlM1tx5Ng_aWMssA7BiXO47')) {
+    console.log("[SELF-HEALING] Detected old duplicated Kurtis images in localStorage. Clearing cache...");
+    localStorage.removeItem('mock_products');
+    localStorage.removeItem('mock_db_initialized_v208');
+    localStorage.removeItem('mock_db_initialized_v209');
+  }
+}
+
+const USE_MOCK_API = isMockActive;
+
+if (typeof window !== 'undefined' && USE_MOCK_API) {
+  const dbVersionFlag = 'mock_db_initialized_v211';
+  if (localStorage.getItem(dbVersionFlag) !== 'true') {
+    console.log("[MOCK API] Version mismatch or first run. Clearing and resetting localStorage mock database...");
+    localStorage.setItem('mock_products', JSON.stringify(productsData));
+    localStorage.setItem('mock_orders', JSON.stringify([]));
+    localStorage.setItem('mock_users', JSON.stringify([]));
+    localStorage.setItem('mock_inquiries', JSON.stringify([]));
+    localStorage.setItem(dbVersionFlag, 'true');
+  } else {
+    if (!localStorage.getItem('mock_products')) {
+      localStorage.setItem('mock_products', JSON.stringify(productsData));
+    }
+    if (!localStorage.getItem('mock_orders')) {
+      localStorage.setItem('mock_orders', JSON.stringify([]));
+    }
+    if (!localStorage.getItem('mock_users')) {
+      localStorage.setItem('mock_users', JSON.stringify([]));
+    }
+    if (!localStorage.getItem('mock_inquiries')) {
+      localStorage.setItem('mock_inquiries', JSON.stringify([]));
+    }
+  }
+
+  const originalFetch = window.fetch;
+
+  window.fetch = async function (input, init) {
+    const urlStr = typeof input === 'string' ? input : input.url;
+    
+    // Check if the request is to our mock API
+    if (urlStr.includes('/api/')) {
+      const parsedUrl = new URL(urlStr, window.location.origin);
+      const pathname = parsedUrl.pathname;
+      const method = (init && init.method || 'GET').toUpperCase();
+      const bodyData = init && init.body ? JSON.parse(init.body) : null;
+      
+      const jsonResponse = (data, status = 200) => {
+        return Promise.resolve({
+          ok: status >= 200 && status < 300,
+          status,
+          statusText: status === 200 ? 'OK' : 'Created',
+          json: () => Promise.resolve(data),
+          text: () => Promise.resolve(JSON.stringify(data)),
+          headers: new Headers({ 'content-type': 'application/json' })
+        });
+      };
+
+      console.log(`[MOCK API INTERCEPTOR] ${method} ${pathname}`, bodyData);
+
+      // --- ROUTING HANDLERS ---
+      
+      // 1. GET /api/config/public
+      if (pathname === '/api/config/public' && method === 'GET') {
+        return jsonResponse({
+          MERCHANT_UPI_ID: 'sathya3772-2@okicici',
+          MERCHANT_UPI_NAME: 'Sathya',
+          WHATSAPP_NUMBER: '919788633200'
+        });
+      }
+
+      // 2. POST /api/admin/login
+      if (pathname === '/api/admin/login' && method === 'POST') {
+        if (bodyData.username === 'admin' && bodyData.password === 'siva@123') {
+          return jsonResponse({ token: 'mock-admin-token-xyz-123' });
+        } else {
+          return jsonResponse({ error: 'Invalid admin credentials' }, 401);
+        }
+      }
+
+      // 3. GET /api/products
+      if (pathname === '/api/products' && method === 'GET') {
+        const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+        return jsonResponse(products);
+      }
+
+      // 4. GET /api/products/:id
+      const prodIdMatch = pathname.match(/^\/api\/products\/([^\/]+)$/);
+      if (prodIdMatch && method === 'GET') {
+        const id = prodIdMatch[1];
+        const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+        const product = products.find(p => p.id === id);
+        if (product) return jsonResponse(product);
+        return jsonResponse({ error: 'Product not found' }, 404);
+      }
+
+      // 5. POST /api/products
+      if (pathname === '/api/products' && method === 'POST') {
+        const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+        const newProduct = {
+          ...bodyData,
+          id: 'prod-' + Date.now(),
+          createdAt: new Date().toISOString()
+        };
+        products.unshift(newProduct);
+        localStorage.setItem('mock_products', JSON.stringify(products));
+        return jsonResponse(newProduct, 201);
+      }
+
+      // 6. PUT /api/products/:id
+      if (prodIdMatch && method === 'PUT') {
+        const id = prodIdMatch[1];
+        const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+        const idx = products.findIndex(p => p.id === id);
+        if (idx !== -1) {
+          products[idx] = { ...products[idx], ...bodyData };
+          localStorage.setItem('mock_products', JSON.stringify(products));
+          return jsonResponse(products[idx]);
+        }
+        return jsonResponse({ error: 'Product not found' }, 404);
+      }
+
+      // 7. DELETE /api/products/:id
+      if (prodIdMatch && method === 'DELETE') {
+        const id = prodIdMatch[1];
+        const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+        const filtered = products.filter(p => p.id !== id);
+        localStorage.setItem('mock_products', JSON.stringify(filtered));
+        return jsonResponse({ success: true });
+      }
+
+      // 8. PUT /api/products/:id/stock
+      const prodStockMatch = pathname.match(/^\/api\/products\/([^\/]+)\/stock$/);
+      if (prodStockMatch && method === 'PUT') {
+        const id = prodStockMatch[1];
+        const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+        const idx = products.findIndex(p => p.id === id);
+        if (idx !== -1) {
+          products[idx].stock = Math.max(0, parseInt(bodyData.stock) || 0);
+          localStorage.setItem('mock_products', JSON.stringify(products));
+          return jsonResponse(products[idx]);
+        }
+        return jsonResponse({ error: 'Product not found' }, 404);
+      }
+
+      // 9. GET /api/orders
+      if (pathname === '/api/orders' && method === 'GET') {
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        return jsonResponse(orders);
+      }
+
+      // 10. POST /api/orders
+      if (pathname === '/api/orders' && method === 'POST') {
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const newOrder = {
+          ...bodyData,
+          id: 'ORD-' + Math.floor(100000 + Math.random() * 900000),
+          createdAt: new Date().toISOString(),
+          status: 'Pending',
+          paymentStatus: bodyData.paymentStatus || 'Pending'
+        };
+
+        // Decrement stock for purchased items
+        if (bodyData.items && Array.isArray(bodyData.items)) {
+          const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+          bodyData.items.forEach(item => {
+            const pIdx = products.findIndex(p => p.id === item.id);
+            if (pIdx !== -1) {
+              products[pIdx].stock = Math.max(0, (products[pIdx].stock || 0) - (item.quantity || 0));
+            }
+          });
+          localStorage.setItem('mock_products', JSON.stringify(products));
+        }
+
+        orders.unshift(newOrder);
+        localStorage.setItem('mock_orders', JSON.stringify(orders));
+
+        // Add/Update user
+        const users = JSON.parse(localStorage.getItem('mock_users') || '[]');
+        const existingUserIdx = users.findIndex(u => u.phone === bodyData.phone || u.email === bodyData.email);
+        const userObj = {
+          id: existingUserIdx !== -1 ? users[existingUserIdx].id : 'USR-' + Math.floor(100000 + Math.random() * 900000),
+          name: bodyData.customerName,
+          email: bodyData.email,
+          phone: bodyData.phone,
+          address: bodyData.address,
+          createdAt: existingUserIdx !== -1 ? users[existingUserIdx].createdAt : new Date().toISOString()
+        };
+        if (existingUserIdx !== -1) {
+          users[existingUserIdx] = userObj;
+        } else {
+          users.unshift(userObj);
+        }
+        localStorage.setItem('mock_users', JSON.stringify(users));
+
+        return jsonResponse(newOrder, 201);
+      }
+
+      // 11. POST /api/orders/:id/cancel
+      const orderCancelMatch = pathname.match(/^\/api\/orders\/([^\/]+)\/cancel$/);
+      if (orderCancelMatch && method === 'POST') {
+        const id = orderCancelMatch[1];
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const idx = orders.findIndex(o => o.id === id);
+        if (idx !== -1) {
+          orders[idx].status = 'Cancelled';
+          localStorage.setItem('mock_orders', JSON.stringify(orders));
+          return jsonResponse(orders[idx]);
+        }
+        return jsonResponse({ error: 'Order not found' }, 404);
+      }
+
+      // 12. GET /api/orders/track/:id
+      const orderTrackMatch = pathname.match(/^\/api\/orders\/track\/([^\/]+)$/);
+      if (orderTrackMatch && method === 'GET') {
+        const id = orderTrackMatch[1];
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const order = orders.find(o => o.id === id);
+        if (order) return jsonResponse(order);
+        return jsonResponse({ error: 'Order not found' }, 404);
+      }
+
+      // 13. POST /api/orders/:id/status
+      const orderStatusMatch = pathname.match(/^\/api\/orders\/([^\/]+)\/status$/);
+      if (orderStatusMatch && method === 'POST') {
+        const id = orderStatusMatch[1];
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const idx = orders.findIndex(o => o.id === id);
+        if (idx !== -1) {
+          orders[idx].status = bodyData.status;
+          localStorage.setItem('mock_orders', JSON.stringify(orders));
+          return jsonResponse(orders[idx]);
+        }
+        return jsonResponse({ error: 'Order not found' }, 404);
+      }
+
+      // 14. POST /api/orders/:id/payment
+      const orderPaymentMatch = pathname.match(/^\/api\/orders\/([^\/]+)\/payment$/);
+      if (orderPaymentMatch && method === 'POST') {
+        const id = orderPaymentMatch[1];
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const idx = orders.findIndex(o => o.id === id);
+        if (idx !== -1) {
+          orders[idx].paymentStatus = bodyData.paymentStatus;
+          localStorage.setItem('mock_orders', JSON.stringify(orders));
+          return jsonResponse(orders[idx]);
+        }
+        return jsonResponse({ error: 'Order not found' }, 404);
+      }
+
+      // 15. DELETE /api/orders/:id
+      const orderIdMatch = pathname.match(/^\/api\/orders\/([^\/]+)$/);
+      if (orderIdMatch && method === 'DELETE') {
+        const id = orderIdMatch[1];
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const filtered = orders.filter(o => o.id !== id);
+        localStorage.setItem('mock_orders', JSON.stringify(filtered));
+        return jsonResponse({ success: true });
+      }
+
+      // 16. GET /api/users
+      if (pathname === '/api/users' && method === 'GET') {
+        const users = JSON.parse(localStorage.getItem('mock_users') || '[]');
+        return jsonResponse(users);
+      }
+
+      // 17. POST /api/users
+      if (pathname === '/api/users' && method === 'POST') {
+        const users = JSON.parse(localStorage.getItem('mock_users') || '[]');
+        const existingIdx = users.findIndex(u => u.phone === bodyData.phone || u.email === bodyData.email);
+        const userObj = {
+          id: existingIdx !== -1 ? users[existingIdx].id : 'USR-' + Math.floor(100000 + Math.random() * 900000),
+          ...bodyData,
+          createdAt: existingIdx !== -1 ? users[existingIdx].createdAt : new Date().toISOString()
+        };
+        if (existingIdx !== -1) {
+          users[existingIdx] = userObj;
+        } else {
+          users.unshift(userObj);
+        }
+        localStorage.setItem('mock_users', JSON.stringify(users));
+        return jsonResponse(userObj, 201);
+      }
+
+      // 18. GET /api/users/orders
+      if (pathname === '/api/users/orders' && method === 'GET') {
+        const email = parsedUrl.searchParams.get('email');
+        const phone = parsedUrl.searchParams.get('phone');
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const userOrders = orders.filter(o => o.email === email || o.phone === phone);
+        return jsonResponse(userOrders);
+      }
+
+      // 19. GET /api/inquiries
+      if (pathname === '/api/inquiries' && method === 'GET') {
+        const inquiries = JSON.parse(localStorage.getItem('mock_inquiries') || '[]');
+        return jsonResponse(inquiries);
+      }
+
+      // 20. POST /api/inquiries
+      if (pathname === '/api/inquiries' && method === 'POST') {
+        const inquiries = JSON.parse(localStorage.getItem('mock_inquiries') || '[]');
+        const newInq = {
+          ...bodyData,
+          id: 'INQ-' + Math.floor(100000 + Math.random() * 900000),
+          createdAt: new Date().toISOString()
+        };
+        inquiries.unshift(newInq);
+        localStorage.setItem('mock_inquiries', JSON.stringify(inquiries));
+        return jsonResponse(newInq, 201);
+      }
+
+      // 21. DELETE /api/inquiries/:id
+      const inqIdMatch = pathname.match(/^\/api\/inquiries\/([^\/]+)$/);
+      if (inqIdMatch && method === 'DELETE') {
+        const id = inqIdMatch[1];
+        const inquiries = JSON.parse(localStorage.getItem('mock_inquiries') || '[]');
+        const filtered = inquiries.filter(i => i.id !== id);
+        localStorage.setItem('mock_inquiries', JSON.stringify(filtered));
+        return jsonResponse({ success: true });
+      }
+
+      // 22. GET /api/stats
+      if (pathname === '/api/stats' && method === 'GET') {
+        const products = JSON.parse(localStorage.getItem('mock_products') || '[]');
+        const orders = JSON.parse(localStorage.getItem('mock_orders') || '[]');
+        const totalSales = orders.filter(o => o.status !== 'Cancelled').reduce((sum, o) => sum + (o.totalAmount || 0), 0);
+        return jsonResponse({
+          totalProducts: products.length,
+          totalOrders: orders.length,
+          totalSales
+        });
+      }
+
+      // 23. POST /api/upload
+      if (pathname === '/api/upload' && method === 'POST') {
+        const mockImgUrl = `/uploads/female_${Math.floor(Math.random() * 90) + 1}.jpeg`;
+        return jsonResponse({ imagePath: mockImgUrl });
+      }
+    }
+
+    return originalFetch(input, init);
+  };
+}
 
 // Fallback products data matching the SAVI'S collection storefront HTML structure
-const fallbackProducts = [];
+const fallbackProducts = productsData;
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || (
-  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:5000'
-    : window.location.origin
-);
+const API_BASE_URL = window.location.origin;
 
 const COLLECTIONS = [
   { name: '🔥 BIG COMBO SALE', img: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=80', href: '#new-arrivals' },
@@ -583,8 +938,34 @@ function highlightText(text, textQuery) {
 
 function App() {
   const [activeTab, setActiveTab] = useState('shop'); // 'shop' | 'admin'
-  const [adminSubTab, setAdminSubTab] = useState('dashboard'); // 'dashboard' | 'orders' | 'products' | 'customers' | 'inquiries'
+  const [adminSubTab, setAdminSubTab] = useState('dashboard'); // 'dashboard' | 'orders' | 'products' | 'customers' | 'inquiries' | 'settings'
   const [products, setProducts] = useState(fallbackProducts);
+
+  // Admin System Settings State
+  const [adminConfig, setAdminConfig] = useState({
+    mongodbUri: '',
+    supabaseDbUrl: '',
+    googleDriveClientEmail: '',
+    googleDriveFolderId: '',
+    hasPrivateKey: false,
+    googleDrivePrivateKey: '',
+    cloudinaryUrl: '',
+    cloudinaryCloudName: '',
+    cloudinaryApiKey: '',
+    cloudinaryApiSecret: '',
+    hasCloudinarySecret: false,
+    adminUsername: '',
+    adminPassword: '',
+    hasPassword: false,
+    merchantUpiId: '',
+    merchantUpiName: '',
+    whatsappNumber: '',
+    callmebotApiKey: '',
+    heroImage1: '',
+    heroImage2: '',
+    heroImage3: ''
+  });
+  const [settingsSaving, setSettingsSaving] = useState(false);
   const [orders, setOrders] = useState([]);
   const [stats, setStats] = useState({ totalSales: 0, totalOrders: 0, totalProducts: 0, totalCustomers: 0 });
   const [inquiries, setInquiries] = useState([]);
@@ -874,12 +1255,22 @@ function App() {
           } else if (resolvedImage.startsWith('uploads/')) {
             resolvedImage = `${API_BASE_URL}/${resolvedImage}`;
           }
+          if (resolvedImage.includes('drive.google.com/thumbnail?id=')) {
+            const fileId = resolvedImage.split('id=')[1]?.split('&')[0];
+            const localBase64 = localStorage.getItem(`drive_img_${fileId}`);
+            if (localBase64) resolvedImage = localBase64;
+          }
 
           let resolvedImageHover = p.imageHover || '';
           if (resolvedImageHover.startsWith('/uploads')) {
             resolvedImageHover = `${API_BASE_URL}${resolvedImageHover}`;
           } else if (resolvedImageHover.startsWith('uploads/')) {
             resolvedImageHover = `${API_BASE_URL}/${resolvedImageHover}`;
+          }
+          if (resolvedImageHover.includes('drive.google.com/thumbnail?id=')) {
+            const fileId = resolvedImageHover.split('id=')[1]?.split('&')[0];
+            const localBase64 = localStorage.getItem(`drive_img_${fileId}`);
+            if (localBase64) resolvedImageHover = localBase64;
           }
 
           const resolvedColorImages = {};
@@ -893,16 +1284,27 @@ function App() {
               } else {
                 resolvedColorImages[col] = img;
               }
+              if (resolvedColorImages[col] && resolvedColorImages[col].includes('drive.google.com/thumbnail?id=')) {
+                const fileId = resolvedColorImages[col].split('id=')[1]?.split('&')[0];
+                const localBase64 = localStorage.getItem(`drive_img_${fileId}`);
+                if (localBase64) resolvedColorImages[col] = localBase64;
+              }
             }
           }
 
           const resolvedAdditionalImages = (p.additionalImages || []).map(img => {
-            if (img && img.startsWith('/uploads')) {
-              return `${API_BASE_URL}${img}`;
-            } else if (img && img.startsWith('uploads/')) {
-              return `${API_BASE_URL}/${img}`;
+            let resImg = img;
+            if (resImg && resImg.startsWith('/uploads')) {
+              resImg = `${API_BASE_URL}${resImg}`;
+            } else if (resImg && resImg.startsWith('uploads/')) {
+              resImg = `${API_BASE_URL}/${resImg}`;
             }
-            return img;
+            if (resImg && resImg.includes('drive.google.com/thumbnail?id=')) {
+              const fileId = resImg.split('id=')[1]?.split('&')[0];
+              const localBase64 = localStorage.getItem(`drive_img_${fileId}`);
+              if (localBase64) resImg = localBase64;
+            }
+            return resImg;
           });
 
           return {
@@ -1070,8 +1472,106 @@ function App() {
         const iData = await iRes.json();
         setInquiries(iData);
       }
+
+      // Config Settings
+      if (adminSubTab === 'settings') {
+        const confRes = await fetch(`${API_BASE_URL}/api/admin/config`, {
+          headers: { 'Authorization': `Bearer ${adminToken}` }
+        });
+        if (confRes.status === 401) {
+          handleAdminLogout();
+          return;
+        }
+        if (confRes.ok) {
+          const confData = await confRes.json();
+          setAdminConfig(prev => ({
+            ...prev,
+            ...confData,
+            adminPassword: '', // Don't show password
+            cloudinaryApiSecret: '', // Don't show secret
+            googleDrivePrivateKey: '' // Don't show private key
+          }));
+        }
+      }
     } catch (err) {
       console.warn("Could not sync live admin analytics.");
+    }
+  };
+
+  const handleSaveSettings = async (e) => {
+    e.preventDefault();
+    setSettingsSaving(true);
+    try {
+      const body = { ...adminConfig };
+      // Filter out placeholders
+      if (body.adminPassword === '') delete body.adminPassword;
+      if (body.cloudinaryApiSecret === '') delete body.cloudinaryApiSecret;
+      if (body.googleDrivePrivateKey === '') delete body.googleDrivePrivateKey;
+      
+      const res = await fetch(`${API_BASE_URL}/api/admin/config`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${adminToken}`
+        },
+        body: JSON.stringify(body)
+      });
+      
+      if (res.status === 401) {
+        handleAdminLogout();
+        return;
+      }
+      
+      if (res.ok) {
+        triggerToast("Settings saved successfully! Restarting backend...");
+        alert("Settings saved successfully! The server is restarting to apply changes. This page will reload in 5 seconds.");
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
+      } else {
+        const data = await res.json();
+        alert(data.error || "Failed to save settings.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error saving settings: " + err.message);
+    } finally {
+      setSettingsSaving(false);
+    }
+  };
+
+  const handleResetDatabase = async () => {
+    if (!window.confirm("⚠️ WARNING: This will permanently delete all products, orders, customers, and messages in the database. Are you absolutely sure you want to reset the database?")) return;
+    const confirmVal = prompt("Type 'RESET' to confirm database wipe:");
+    if (confirmVal !== 'RESET') {
+      alert("Database reset cancelled.");
+      return;
+    }
+    
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/admin/reset-database`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${adminToken}`
+        }
+      });
+      
+      if (res.status === 401) {
+        handleAdminLogout();
+        return;
+      }
+      
+      if (res.ok) {
+        triggerToast("Database reset successfully!");
+        alert("Database has been reset successfully! The page will reload now.");
+        window.location.reload();
+      } else {
+        const data = await res.json();
+        alert(data.error || "Failed to reset database.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error resetting database: " + err.message);
     }
   };
 
@@ -1212,8 +1712,31 @@ function App() {
   };
 
   useEffect(() => {
+    const checkBackendReachability = async () => {
+      if (!isMockActive) {
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 2500);
+          const healthRes = await fetch(`${API_BASE_URL}/api/health`, { signal: controller.signal });
+          clearTimeout(timeoutId);
+          if (!healthRes.ok) {
+            throw new Error("Backend offline");
+          }
+        } catch (e) {
+          console.warn("Backend server is offline/unreachable. Falling back to Demo Mode (Mock DB).", e.message);
+          localStorage.setItem('savi_use_mock_api', 'true');
+          triggerToast("Backend server offline. Switched to offline Demo Mode.");
+          setTimeout(() => {
+            window.location.reload();
+          }, 1500);
+        }
+      }
+    };
+    checkBackendReachability();
+
     fetchStoreData();
     fetchPublicConfig();
+    autoSyncGoogleDriveImages(); // Automatically sync all categories from Google Drive on startup!
     const storeInterval = setInterval(fetchStoreData, 10000);
     return () => clearInterval(storeInterval);
   }, []);
@@ -1377,7 +1900,7 @@ function App() {
         const placedTotal = order.totalAmount || finalTotal;
         const itemsWithImages = order.items.map(item => {
           const itemImg = item.image || '';
-          const fullImgUrl = itemImg.startsWith('http') ? itemImg : `${API_BASE_URL}${itemImg}`;
+          const fullImgUrl = itemImg.startsWith('http') ? itemImg : `${window.location.origin}${itemImg}`;
           return `- ${item.name} (${item.size || 'M'}) x${item.quantity}\n  Link to image: ${fullImgUrl}`;
         }).join('\n');
         
@@ -1408,7 +1931,7 @@ function App() {
       // Auto-trigger WhatsApp message (Offline Mode, includes product image URLs)
       const offlineItemsWithImages = checkoutItems.map(item => {
         const itemImg = item.image || '';
-        const fullImgUrl = itemImg.startsWith('http') ? itemImg : `${API_BASE_URL}${itemImg}`;
+        const fullImgUrl = itemImg.startsWith('http') ? itemImg : `${window.location.origin}${itemImg}`;
         return `- ${item.name} (${item.size || 'M'}) x${item.quantity}\n  Link to image: ${fullImgUrl}`;
       }).join('\n');
 
@@ -1894,21 +2417,292 @@ function App() {
     }
   };
 
-  // Helper to upload images to backend which uploads to Supabase/Cloudinary
-  const uploadToBackend = (file) => {
+  // Google Apps Script Web App URL to bridge uploads to Google Drive folders
+  const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyNWy-gh3RJMjw9VJKgk1tSA2c_UV53pjFneSUb5aTLDFexRW5n1s7cCEoxNI1cW9gH8g/exec';
+
+  // Maps product categories to Google Drive Folder IDs
+  const getDriveFolderIdForCategory = (category) => {
+    const cat = (category || '').toLowerCase();
+    if (cat.includes('jewel')) {
+      return '1w5gw8xvWBzXFBJyv366u3F1hEkLLpido'; // Jewels Folder
+    } else if (cat.includes('kids')) {
+      return '1D85Y_SooARVjcyWmCs6DsMKLlMRCIF_s'; // Kids Folder
+    } else {
+      // Default to female folder (Cotton, Kurtis, Sarees, Co-ords, etc.)
+      return '1oYvJU4aAMUdTEutz9RUC1oRAmzoJ113H'; // Female/Cotton Folder
+    }
+  };
+
+  // Helper to upload images directly to Google Drive depending on category
+  const uploadToGoogleDrive = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = async () => {
         try {
           const base64Data = reader.result;
+          
+          // Determine folder ID based on selected category
+          const category = newProduct.category || 'Jewellery';
+          const folderId = getDriveFolderIdForCategory(category);
+          
+          if (!GOOGLE_APPS_SCRIPT_URL || GOOGLE_APPS_SCRIPT_URL.includes('/exec') === false || GOOGLE_APPS_SCRIPT_URL.includes('YOUR_') || GOOGLE_APPS_SCRIPT_URL.includes('https://script.google.com/macros/s/') === false || GOOGLE_APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbyvL5FpG4b8-zW_D9iA0m6S1w_M/exec') {
+            console.log(`[GOOGLE DRIVE MOCK] Apps Script URL not configured. Simulating Google Drive upload to folder ${folderId}...`);
+            const fakeFileId = '1' + Math.random().toString(36).substring(2, 17) + Math.random().toString(36).substring(2, 17);
+            const fakeUrl = `https://drive.google.com/thumbnail?id=${fakeFileId}&sz=w1000`;
+            localStorage.setItem(`drive_img_${fakeFileId}`, base64Data);
+            resolve(fakeUrl);
+            return;
+          }
+
+          const res = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify({
+              imageBase64: base64Data,
+              filename: `${category.toLowerCase().replace(/\s+/g, '_')}_${Date.now()}_${file.name}`,
+              folderId: folderId // Send target folder ID to the Apps Script Web App!
+            })
+          });
+          
+          const data = await res.json();
+          if (data.success) {
+            resolve(data.url);
+          } else {
+            reject(new Error(data.error || 'Failed to upload to Google Drive'));
+          }
+        } catch (err) {
+          reject(err);
+        }
+      };
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  // Parse dynamic properties from Google Drive filenames
+  // Support format: "Product Name_Price_Category.jpg" or "Product Name_Price.jpg"
+  const parseDriveFilename = (filename, defaultCategory) => {
+    const cleanName = filename.replace(/\.[^/.]+$/, "");
+    const parts = cleanName.split('_').map(p => p.trim()).filter(Boolean);
+    
+    let name = cleanName.replace(/_/g, " ");
+    let price = defaultCategory === 'Kids Collections' ? 299 : (defaultCategory === 'Jewellery' ? 399 : 499);
+    let category = defaultCategory;
+    
+    // Look for a numeric part for price
+    const priceIdx = parts.findIndex(p => !isNaN(parseFloat(p)) && isFinite(p));
+    if (priceIdx !== -1) {
+      price = parseFloat(parts[priceIdx]);
+      
+      const otherParts = parts.filter((_, idx) => idx !== priceIdx);
+      if (otherParts.length >= 2) {
+        const knownCategories = ['Kids', 'Kids Collections', 'Home Essentials', 'Co-ords', 'Co Ords', 'Cotton', 'Cotton Collection', 'Feeding', 'Feeding Dress', 'Kurtis', 'Nightwear', 'Night Gown', 'Sarees', 'Short Tops', 'Jewellery', 'Jewels'];
+        const catIdx = otherParts.findIndex(p => knownCategories.some(kc => kc.toLowerCase() === p.toLowerCase()));
+        if (catIdx !== -1) {
+          const rawCat = otherParts[catIdx];
+          const matchedCat = knownCategories.find(kc => kc.toLowerCase() === rawCat.toLowerCase());
+          if (matchedCat) {
+            // Map short name to select option value
+            if (matchedCat === 'Kids' || matchedCat === 'Kids Collections') category = 'Kids';
+            else if (matchedCat === 'Cotton' || matchedCat === 'Cotton Collection') category = 'Cotton';
+            else if (matchedCat === 'Nightwear' || matchedCat === 'Night Gown') category = 'Nightwear';
+            else category = matchedCat;
+          }
+          name = otherParts.filter((_, idx) => idx !== catIdx).join(' ');
+        } else {
+          name = otherParts.join(' ');
+        }
+      } else if (otherParts.length === 1) {
+        name = otherParts[0];
+      }
+    } else {
+      // Check if any part is a known category
+      const knownCategories = ['Kids', 'Kids Collections', 'Home Essentials', 'Co-ords', 'Co Ords', 'Cotton', 'Cotton Collection', 'Feeding', 'Feeding Dress', 'Kurtis', 'Nightwear', 'Night Gown', 'Sarees', 'Short Tops', 'Jewellery', 'Jewels'];
+      const catIdx = parts.findIndex(p => knownCategories.some(kc => kc.toLowerCase() === p.toLowerCase()));
+      if (catIdx !== -1) {
+        const rawCat = parts[catIdx];
+        const matchedCat = knownCategories.find(kc => kc.toLowerCase() === rawCat.toLowerCase());
+        if (matchedCat) {
+          if (matchedCat === 'Kids' || matchedCat === 'Kids Collections') category = 'Kids';
+          else if (matchedCat === 'Cotton' || matchedCat === 'Cotton Collection') category = 'Cotton';
+          else if (matchedCat === 'Nightwear' || matchedCat === 'Night Gown') category = 'Nightwear';
+          else category = matchedCat;
+        }
+        name = parts.filter((_, idx) => idx !== catIdx).join(' ');
+      }
+    }
+    
+    return { name, price, category };
+  };
+
+  // Sync images from the Google Drive folders to the catalog
+  const handleSyncGoogleDriveImages = async (category) => {
+    if (!GOOGLE_APPS_SCRIPT_URL || GOOGLE_APPS_SCRIPT_URL.includes('/exec') === false || GOOGLE_APPS_SCRIPT_URL.includes('YOUR_') || GOOGLE_APPS_SCRIPT_URL.includes('https://script.google.com/macros/s/') === false || GOOGLE_APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbyvL5FpG4b8-zW_D9iA0m6S1w_M/exec') {
+      alert("To sync live images from Google Drive, please deploy the Google Apps Script Web App (see instructions in GoogleAppsScript.gs in the project root) and set its URL in App.jsx.");
+      return;
+    }
+    
+    const folderId = getDriveFolderIdForCategory(category);
+    triggerToast(`Syncing ${category} from Google Drive...`);
+    try {
+      const res = await fetch(`${GOOGLE_APPS_SCRIPT_URL}?folderId=${folderId}`);
+      const data = await res.json();
+      if (data.success && data.files) {
+        const driveFiles = data.files; // Array of { id, name, url, webViewLink }
+        
+        let baseProducts = [];
+        if (USE_MOCK_API) {
+          baseProducts = JSON.parse(localStorage.getItem('mock_products') || '[]');
+          if (baseProducts.length === 0) baseProducts = fallbackProducts;
+        } else {
+          try {
+            const pRes = await fetch(`${API_BASE_URL}/api/products`);
+            if (pRes.ok) baseProducts = await pRes.json();
+          } catch (e) {
+            baseProducts = products;
+          }
+        }
+        
+        // Remove old drive sync products for this category to reload fresh
+        const filteredProducts = baseProducts.filter(p => !p.id.includes(`-drive-`));
+        const updatedProducts = [...filteredProducts];
+        let addedCount = 0;
+        
+        driveFiles.forEach((file, index) => {
+          const { name, price, category: matchedCategory } = parseDriveFilename(file.name, category);
+          
+          const newProductObj = {
+            id: `prod-${matchedCategory.toLowerCase().replace(/\s+/g, '-')}-drive-${file.id}`,
+            createdAt: new Date().toISOString(),
+            name: name,
+            price: price,
+            oldPrice: Math.round(price * 1.3),
+            image: file.url,
+            category: matchedCategory,
+            description: `Exquisite quality ${matchedCategory.toLowerCase()} item. Handcrafted details, premium finish. Hosted securely on Google Drive.`,
+            sizes: matchedCategory === 'Kids' ? ['2-4 Y', '4-6 Y', '6-8 Y'] : ['S', 'M', 'L', 'XL', 'XXL'],
+            colors: ['Default'],
+            stock: 15,
+            featured: index === 0
+          };
+          updatedProducts.unshift(newProductObj);
+          addedCount++;
+        });
+        
+        if (USE_MOCK_API) {
+          localStorage.setItem('mock_products', JSON.stringify(updatedProducts));
+        }
+        
+        setProducts(updatedProducts);
+        triggerToast(`Successfully synced Google Drive! Loaded ${addedCount} items.`);
+        alert(`Sync complete! Loaded ${addedCount} products from Google Drive.`);
+      } else {
+        alert("Failed to read from Google Drive: " + (data.error || "Unknown error"));
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error syncing Google Drive: " + err.message);
+    }
+  };
+
+  // Auto-sync Google Drive images from all three folders on startup
+  const autoSyncGoogleDriveImages = async () => {
+    if (!GOOGLE_APPS_SCRIPT_URL || GOOGLE_APPS_SCRIPT_URL.includes('/exec') === false || GOOGLE_APPS_SCRIPT_URL.includes('YOUR_') || GOOGLE_APPS_SCRIPT_URL.includes('https://script.google.com/macros/s/') === false || GOOGLE_APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbyvL5FpG4b8-zW_D9iA0m6S1w_M/exec') {
+      console.log("[GOOGLE DRIVE AUTO-SYNC] Google Apps Script URL not configured or is placeholder. Skipping auto-sync.");
+      return;
+    }
+    
+    console.log("[GOOGLE DRIVE AUTO-SYNC] Starting background catalog synchronization...");
+    try {
+      // Query the Google Apps Script Web App without folderId to get all three folders at once!
+      const res = await fetch(GOOGLE_APPS_SCRIPT_URL);
+      const data = await res.json();
+      
+      if (data.success) {
+        let baseProducts = [];
+        if (USE_MOCK_API) {
+          baseProducts = JSON.parse(localStorage.getItem('mock_products') || '[]');
+          if (baseProducts.length === 0) baseProducts = fallbackProducts;
+        } else {
+          try {
+            const pRes = await fetch(`${API_BASE_URL}/api/products`);
+            if (pRes.ok) baseProducts = await pRes.json();
+          } catch (e) {
+            baseProducts = products;
+          }
+        }
+
+        // Filter out all old Google Drive synced products to rebuild it fresh
+        const filteredProducts = baseProducts.filter(p => !p.id.includes('-drive-'));
+        const updatedProducts = [...filteredProducts];
+        let addedCount = 0;
+        
+        // Helper to sync category files
+        const syncCategoryList = (driveFiles, defaultCategory) => {
+          driveFiles.forEach((file, index) => {
+            const { name, price, category } = parseDriveFilename(file.name, defaultCategory);
+            
+            const newProductObj = {
+              id: `prod-${category.toLowerCase().replace(/\s+/g, '-')}-drive-${file.id}`,
+              createdAt: new Date().toISOString(),
+              name: name,
+              price: price,
+              oldPrice: Math.round(price * 1.3),
+              image: file.url,
+              category: category,
+              description: `Exquisite quality ${category.toLowerCase()} item. Handcrafted details, premium finish. Hosted securely on Google Drive.`,
+              sizes: category === 'Kids' ? ['2-4 Y', '4-6 Y', '6-8 Y'] : ['S', 'M', 'L', 'XL', 'XXL'],
+              colors: ['Default'],
+              stock: 15,
+              featured: index === 0
+            };
+            
+            updatedProducts.unshift(newProductObj);
+            addedCount++;
+          });
+        };
+        
+        // Sync each category from the grouped response
+        if (data.jewels) syncCategoryList(data.jewels, 'Jewellery');
+        if (data.female) syncCategoryList(data.female, 'Cotton');
+        if (data.kids) syncCategoryList(data.kids, 'Kids Collections');
+        
+        if (USE_MOCK_API) {
+          localStorage.setItem('mock_products', JSON.stringify(updatedProducts));
+        }
+        
+        setProducts(updatedProducts);
+        console.log(`[GOOGLE DRIVE AUTO-SYNC] Sync complete. Loaded ${addedCount} images from Google Drive.`);
+      }
+    } catch (err) {
+      console.warn("[GOOGLE DRIVE AUTO-SYNC] Auto-sync failed:", err);
+    }
+  };
+
+  // Helper to upload images to backend which uploads to Supabase/Cloudinary/Google Drive
+  const uploadToBackend = (file, category = 'Jewellery') => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = async () => {
+        try {
+          const base64Data = reader.result;
+          const folderId = getDriveFolderIdForCategory(category);
+          const filename = `${category.toLowerCase().replace(/\s+/g, '_')}_${Date.now()}_${file.name}`;
           const res = await fetch(`${API_BASE_URL}/api/upload`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
               'Authorization': `Bearer ${adminToken}`
             },
-            body: JSON.stringify({ imageBase64: base64Data })
+            body: JSON.stringify({ 
+              imageBase64: base64Data,
+              filename: filename,
+              folderId: folderId
+            })
           });
           const data = await res.json();
           if (res.ok && data.success) {
@@ -1924,7 +2718,7 @@ function App() {
     });
   };
 
-  // handle image upload from file selector using Backend API (Supabase Storage)
+  // handle image upload from file selector using Google Drive
   const handleProductImageUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -1933,11 +2727,25 @@ function App() {
       return;
     }
     setImageUploading(true);
-    triggerToast("Uploading product image...");
     try {
-      const downloadUrl = await uploadToBackend(file);
+      let downloadUrl;
+      if (!USE_MOCK_API) {
+        triggerToast("Uploading product image to backend...");
+        try {
+          downloadUrl = await uploadToBackend(file, newProduct.category);
+          triggerToast("Image uploaded successfully to backend!");
+        } catch (backendErr) {
+          console.warn("Backend upload failed, trying Google Drive fallback...", backendErr);
+          triggerToast("Backend upload failed, trying Google Drive...");
+          downloadUrl = await uploadToGoogleDrive(file);
+          triggerToast("Image uploaded successfully to Google Drive!");
+        }
+      } else {
+        triggerToast("Uploading product image to Google Drive...");
+        downloadUrl = await uploadToGoogleDrive(file);
+        triggerToast("Image uploaded successfully to Google Drive!");
+      }
       setNewProduct(prev => ({ ...prev, image: downloadUrl }));
-      triggerToast("Image uploaded successfully!");
     } catch (err) {
       console.error("Upload failed", err);
       alert("Upload failed: " + err.message);
@@ -1946,7 +2754,7 @@ function App() {
     }
   };
 
-  // handle image upload for a specific color swatch using Backend API (Supabase Storage)
+  // handle image upload for a specific color swatch using Google Drive
   const handleColorImageUpload = async (color, e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -1954,9 +2762,24 @@ function App() {
       alert("Please upload an image smaller than 5MB.");
       return;
     }
-    triggerToast(`Uploading image for ${color}...`);
     try {
-      const downloadUrl = await uploadToBackend(file);
+      let downloadUrl;
+      if (!USE_MOCK_API) {
+        triggerToast(`Uploading image for ${color} to backend...`);
+        try {
+          downloadUrl = await uploadToBackend(file, newProduct.category);
+          triggerToast(`Uploaded image for ${color} to backend!`);
+        } catch (backendErr) {
+          console.warn("Backend upload failed, trying Google Drive fallback...", backendErr);
+          triggerToast(`Backend upload failed, trying Google Drive for ${color}...`);
+          downloadUrl = await uploadToGoogleDrive(file);
+          triggerToast(`Uploaded image for ${color} to Google Drive!`);
+        }
+      } else {
+        triggerToast(`Uploading image for ${color} to Google Drive...`);
+        downloadUrl = await uploadToGoogleDrive(file);
+        triggerToast(`Uploaded image for ${color} to Google Drive!`);
+      }
       setNewProduct(prev => ({
         ...prev,
         colorImages: {
@@ -1964,7 +2787,6 @@ function App() {
           [color]: downloadUrl
         }
       }));
-      triggerToast(`Uploaded image for ${color}!`);
     } catch (err) {
       console.error("Upload failed", err);
       alert("Upload failed: " + err.message);
@@ -2297,7 +3119,7 @@ function App() {
         const pCat = p.category.toLowerCase().replace(/[\s-]/g, '');
         const target = selectedCategoryFilter.toLowerCase().replace(/[\s-]/g, '');
         if (target === 'jewellery' || target === 'jewels') {
-          return pCat === 'coveringornaments' || pCat === 'goldornaments' || pCat === 'jewellery' || pCat === 'jewelry';
+          return pCat === 'coveringornaments' || pCat === 'goldornaments' || pCat === 'jewellery' || pCat === 'jewelry' || pCat === 'jewels';
         }
         if (target === 'kids') {
           return pCat === 'kids' || pCat === 'kidscollections' || pCat === 'kidscollection';
@@ -2452,24 +3274,42 @@ function App() {
               <span className="action-label">{currentUser ? (currentUser.name?.split(' ')[0] || 'Profile') : 'Login'}</span>
             </button>
 
-            {/* Settings */}
+            {/* Live/Demo Connection Badge */}
             <button 
-              className="header-action-btn" 
-              title="Preferences"
+              className="header-action-btn"
               onClick={() => {
-                if (currentUser) {
-                  setIsProfileOpen(true);
-                  fetchUserOrders();
-                } else {
-                  setPendingAction(null);
-                  setIsLoginModalOpen(true);
-                }
+                const newMode = !isMockActive;
+                localStorage.setItem('savi_use_mock_api', newMode ? 'true' : 'false');
+                triggerToast(newMode ? "Switched to Demo Mode (Mock DB)!" : "Switched to Live Mode (Connected to Server)!");
+                setTimeout(() => {
+                  window.location.reload();
+                }, 1000);
+              }}
+              title={isMockActive ? "Running in Demo Mode (Mock DB) - Click to Switch to Live Mode" : "Running in Live Mode (Express API) - Click to Switch to Demo Mode"}
+              style={{
+                borderColor: isMockActive ? '#ffc107' : '#28a745',
+                color: isMockActive ? '#ffc107' : '#28a745',
+                background: 'rgba(0,0,0,0.05)'
               }}
             >
               <span className="action-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                {isMockActive ? '🟡' : '🟢'}
               </span>
-              <span className="action-label">Config</span>
+              <span className="action-label" style={{ color: isMockActive ? '#ffc107' : '#28a745' }}>
+                {isMockActive ? 'Demo Mode' : 'Live API'}
+              </span>
+            </button>
+
+            {/* Admin Console */}
+            <button 
+              className="header-action-btn" 
+              title="Admin Dashboard"
+              onClick={() => handleAdminPanelAccess()}
+            >
+              <span className="action-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+              </span>
+              <span className="action-label">Admin</span>
             </button>
 
             {/* Wishlist */}
@@ -3639,23 +4479,65 @@ function App() {
                   </h1>
                   <div className="admin-actions" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
                     {adminSubTab === 'products' && (
-                      <button className="btn btn-primary" onClick={() => { 
-                        setIsAddModalOpen(true); 
-                        setEditingProductId(null); 
-                        setNewProduct({
-                          name: '',
-                          price: '',
-                          oldPrice: '',
-                          image: '',
-                          category: 'Co-ords',
-                          description: '',
-                          sizes: 'S, M, L, XL',
-                          colors: 'Default',
-                          stock: 20,
-                          featured: false,
-                          colorImages: {}
-                        });
-                      }}>＋ Add New Product</button>
+                      <>
+                        <button className="btn btn-primary" onClick={() => { 
+                          setIsAddModalOpen(true); 
+                          setEditingProductId(null); 
+                          setNewProduct({
+                            name: '',
+                            price: '',
+                            oldPrice: '',
+                            image: '',
+                            category: 'Co-ords',
+                            description: '',
+                            sizes: 'S, M, L, XL',
+                            colors: 'Default',
+                            stock: 20,
+                            featured: false,
+                            colorImages: {}
+                          });
+                        }}>＋ Add New Product</button>
+                        <select 
+                          id="sync-category-select"
+                          style={{
+                            padding: '6px 10px',
+                            borderRadius: '20px',
+                            border: '1px solid var(--border)',
+                            background: 'var(--bg-card)',
+                            color: 'var(--text-primary)',
+                            fontSize: '11px',
+                            fontWeight: '600',
+                            cursor: 'pointer',
+                            outline: 'none'
+                          }}
+                        >
+                          <option value="Jewellery">Sync Jewels Folder</option>
+                          <option value="Cotton">Sync Cotton (Female) Folder</option>
+                          <option value="Kids Collections">Sync Kids Folder</option>
+                        </select>
+                        <button 
+                          className="btn" 
+                          onClick={() => {
+                            const sel = document.getElementById('sync-category-select');
+                            handleSyncGoogleDriveImages(sel ? sel.value : 'Jewellery');
+                          }}
+                          style={{
+                            background: '#0F9D58',
+                            color: '#fff',
+                            border: 'none',
+                            padding: '6px 14px',
+                            borderRadius: '20px',
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '6px'
+                          }}
+                        >
+                          🔄 Sync Folder
+                        </button>
+                      </>
                     )}
                     <button 
                       onClick={() => setActiveTab('shop')} 
@@ -3841,7 +4723,7 @@ function App() {
                               {/* Left Side: Order Items */}
                               <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                                 {o.items.map((item, idx) => {
-                                  const itemImg = item.image || (products.find(p => p.id === item.id)?.image) || 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=100&auto=format&fit=crop';
+                                  const itemImg = item.image || (products.find(p => p.id === item.id)?.image) || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f3f4f6"><rect width="100%25" height="100%25" fill="%23f3f4f6"/><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="%23d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="3" y1="6" x2="21" y2="6" stroke="%23d1d5db" stroke-width="1.5"/><path d="M16 10a4 4 0 0 1-8 0" stroke="%23d1d5db" stroke-width="1.5" fill="none"/></svg>';
                                   return (
                                     <div key={idx} style={{ display: 'flex', gap: '15px', alignItems: 'center', borderBottom: idx < o.items.length - 1 ? '1px dotted var(--border-color)' : 'none', paddingBottom: idx < o.items.length - 1 ? '15px' : '0' }}>
                                       <img 
@@ -4803,7 +5685,14 @@ function App() {
                 src={getProductImageForColor(selectedProduct, selectedColor)} 
                 alt={selectedProduct.name} 
                 onError={(e) => {
-                  e.target.src = 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop';
+                  if (!e.target.dataset.retried) {
+                    e.target.dataset.retried = 'true';
+                    const currentSrc = e.target.src;
+                    e.target.src = '';
+                    setTimeout(() => { e.target.src = currentSrc; }, 1000);
+                  } else {
+                    e.target.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f3f4f6"><rect width="100%25" height="100%25" fill="%23f3f4f6"/><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="%23d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="3" y1="6" x2="21" y2="6" stroke="%23d1d5db" stroke-width="1.5"/><path d="M16 10a4 4 0 0 1-8 0" stroke="%23d1d5db" stroke-width="1.5" fill="none"/></svg>';
+                  }
                 }}
               />
             </div>
@@ -6002,7 +6891,14 @@ function ProductCard({ product, hoverImage, onOpen, onAddCart, onWishlist, isWis
             className="ppc-img primary-img" 
             loading="lazy" 
             onError={(e) => {
-              e.target.src = 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=300&q=80';
+              if (!e.target.dataset.retried) {
+                e.target.dataset.retried = 'true';
+                const currentSrc = e.target.src;
+                e.target.src = '';
+                setTimeout(() => { e.target.src = currentSrc; }, 1000);
+              } else {
+                e.target.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f3f4f6"><rect width="100%25" height="100%25" fill="%23f3f4f6"/><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="%23d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="3" y1="6" x2="21" y2="6" stroke="%23d1d5db" stroke-width="1.5"/><path d="M16 10a4 4 0 0 1-8 0" stroke="%23d1d5db" stroke-width="1.5" fill="none"/></svg>';
+              }
             }}
           />
           <img 

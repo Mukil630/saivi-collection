@@ -6,16 +6,7 @@ echo            SAVI'S COLLECTION BUILD ^& SETUP
 echo =======================================================
 echo.
 
-echo 1. Checking backend dependencies...
-if not exist "backend\node_modules\" (
-    echo [INFO] Installing backend dependencies. Please wait...
-    cd backend && npm install && cd ..
-) else (
-    echo [OK] Backend dependencies already installed.
-)
-echo.
-
-echo 2. Checking frontend dependencies...
+echo 1. Checking frontend dependencies...
 if not exist "frontend\node_modules\" (
     echo [INFO] Installing frontend dependencies. Please wait...
     cd frontend && npm install && cd ..
@@ -24,7 +15,7 @@ if not exist "frontend\node_modules\" (
 )
 echo.
 
-echo 3. Building React Frontend for Production...
+echo 2. Building React Frontend for Production...
 cd frontend
 npm run build
 cd ..

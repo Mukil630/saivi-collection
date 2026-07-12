@@ -18,7 +18,7 @@ const serverProcess = spawn('node', ['backend/index.js'], {
 let serverOutput = '';
 serverProcess.stdout.on('data', (data) => {
   serverOutput += data.toString();
-  // console.log(`[Server] ${data.toString().trim()}`);
+  console.log(`[Server] ${data.toString().trim()}`);
 });
 
 serverProcess.stderr.on('data', (data) => {

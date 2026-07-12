@@ -1,0 +1,4129 @@
+{
+  "products": [
+    {
+      "id": "prod-female-kurti-1",
+      "createdAt": "2026-07-08T16:00:00.000Z",
+      "name": "Elegance Floral Kurti",
+      "price": 499,
+      "oldPrice": 699,
+      "image": "https://drive.google.com/thumbnail?id=1JZjlEcQybdlM1tx5Ng_aWMssA7BiXO47&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-2",
+      "createdAt": "2026-07-08T16:00:01.000Z",
+      "name": "Designer Georgette Kurti",
+      "price": 549,
+      "oldPrice": 769,
+      "image": "https://drive.google.com/thumbnail?id=1JuCriaCbN_-PncIwYJPiU_Z709VBhzDK&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-3",
+      "createdAt": "2026-07-08T16:00:02.000Z",
+      "name": "Classic Cotton Anarkali Kurti",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1jsyJHzxc_vheEMuvHBv3awZprnu-Pkhk&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-4",
+      "createdAt": "2026-07-08T16:00:03.000Z",
+      "name": "Premium Rayon Nyra Cut Kurti",
+      "price": 649,
+      "oldPrice": 909,
+      "image": "https://drive.google.com/thumbnail?id=196mESdAc5dLJhJ4Yf3Mn3zcRs15m5w52&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-5",
+      "createdAt": "2026-07-08T16:00:04.000Z",
+      "name": "Festive Silk Kurti",
+      "price": 699,
+      "oldPrice": 979,
+      "image": "https://drive.google.com/thumbnail?id=1awc0uqplGLHdOIVEYTbfjzLVga8IuT85&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-6",
+      "createdAt": "2026-07-08T16:00:05.000Z",
+      "name": "Casual Daily Wear Kurti",
+      "price": 749,
+      "oldPrice": 1049,
+      "image": "https://drive.google.com/thumbnail?id=1AOiQKbj12IpaV1riuVwMqXoOtYSax3XL&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-7",
+      "createdAt": "2026-07-08T16:00:06.000Z",
+      "name": "Stylish Rayon Kurti",
+      "price": 799,
+      "oldPrice": 1119,
+      "image": "https://drive.google.com/thumbnail?id=1_sZ2nn8zYTwcZBk-ugoqXnhhLlucNh6w&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-8",
+      "createdAt": "2026-07-08T16:00:07.000Z",
+      "name": "Handblock Printed Kurti",
+      "price": 849,
+      "oldPrice": 1189,
+      "image": "https://drive.google.com/thumbnail?id=1VcXA7hl2UckkpuqPKoi9iLQKL9OasoPz&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-9",
+      "createdAt": "2026-07-08T16:00:08.000Z",
+      "name": "Chikankari Handwork Kurti",
+      "price": 899,
+      "oldPrice": 1259,
+      "image": "https://drive.google.com/thumbnail?id=19sFoXcOPsCdO3WE27iMKY_T_UbTy0nwJ&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-10",
+      "createdAt": "2026-07-08T16:00:09.000Z",
+      "name": "Banarasi Style Georgette Kurti",
+      "price": 949,
+      "oldPrice": 1329,
+      "image": "https://drive.google.com/thumbnail?id=1YA_jfeFlry7VpWLeA-TnWsAzIPNyFpUn&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-11",
+      "createdAt": "2026-07-08T16:00:10.000Z",
+      "name": "Jaipuri Printed Cotton Kurti",
+      "price": 999,
+      "oldPrice": 1399,
+      "image": "https://drive.google.com/thumbnail?id=1HRDxjxWoW5bu9SyoS_TGm859qveluDeE&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-12",
+      "createdAt": "2026-07-08T16:00:11.000Z",
+      "name": "Lace Detailed Rayon Kurti",
+      "price": 1049,
+      "oldPrice": 1469,
+      "image": "https://drive.google.com/thumbnail?id=1WcUIof_yJdq-AJhEkXcMilBgfGKDZnu1&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-13",
+      "createdAt": "2026-07-08T16:00:12.000Z",
+      "name": "Elegance Floral Palazzo Set",
+      "price": 1099,
+      "oldPrice": 1539,
+      "image": "https://drive.google.com/thumbnail?id=1A0mtGiga98BjcX4X97Ok5QDqv9fVDAS2&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-14",
+      "createdAt": "2026-07-08T16:00:13.000Z",
+      "name": "Designer Georgette Palazzo Set",
+      "price": 1149,
+      "oldPrice": 1609,
+      "image": "https://drive.google.com/thumbnail?id=1lRfVtCXhG4HOPrVwAKGdxZrA7dXGAfBg&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-15",
+      "createdAt": "2026-07-08T16:00:14.000Z",
+      "name": "Classic Cotton Anarkali Palazzo Set",
+      "price": 1199,
+      "oldPrice": 1679,
+      "image": "https://drive.google.com/thumbnail?id=1OJIHVq0se2HAdenDHfQLj1ET8L0o6JMq&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-16",
+      "createdAt": "2026-07-08T16:00:15.000Z",
+      "name": "Premium Rayon Nyra Cut Palazzo Set",
+      "price": 1249,
+      "oldPrice": 1749,
+      "image": "https://drive.google.com/thumbnail?id=1z0w9ZPnrzH5Y_jtST_DmiFka_0YMakhV&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-17",
+      "createdAt": "2026-07-08T16:00:16.000Z",
+      "name": "Festive Silk Palazzo Set",
+      "price": 1299,
+      "oldPrice": 1819,
+      "image": "https://drive.google.com/thumbnail?id=1JAIQqqFif2rjzgGpIfJ7a9DQuyV2fz1n&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-18",
+      "createdAt": "2026-07-08T16:00:17.000Z",
+      "name": "Casual Daily Wear Palazzo Set",
+      "price": 1349,
+      "oldPrice": 1889,
+      "image": "https://drive.google.com/thumbnail?id=1nP0xhGqr719qxrYYKzDfR050MYNq7xaA&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-19",
+      "createdAt": "2026-07-08T16:00:18.000Z",
+      "name": "Stylish Rayon Palazzo Set",
+      "price": 1399,
+      "oldPrice": 1959,
+      "image": "https://drive.google.com/thumbnail?id=1w8eCWfe1penXptdcrXdXyz5oll1UK1fP&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-20",
+      "createdAt": "2026-07-08T16:00:19.000Z",
+      "name": "Handblock Printed Palazzo Set",
+      "price": 1449,
+      "oldPrice": 2029,
+      "image": "https://drive.google.com/thumbnail?id=1DcYH8Bz63jlZ7dg-u_w2REh4OYeU4ok3&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-21",
+      "createdAt": "2026-07-08T16:00:20.000Z",
+      "name": "Chikankari Handwork Palazzo Set",
+      "price": 1499,
+      "oldPrice": 2099,
+      "image": "https://drive.google.com/thumbnail?id=19e9PnyB2EqvQLIj8RshMULWkV8aeqsaV&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-22",
+      "createdAt": "2026-07-08T16:00:21.000Z",
+      "name": "Banarasi Style Georgette Palazzo Set",
+      "price": 1549,
+      "oldPrice": 2169,
+      "image": "https://drive.google.com/thumbnail?id=1JgCwiEvjhcJf90nNHK0NOOUJU6YBXIGU&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-23",
+      "createdAt": "2026-07-08T16:00:22.000Z",
+      "name": "Jaipuri Printed Cotton Palazzo Set",
+      "price": 499,
+      "oldPrice": 699,
+      "image": "https://drive.google.com/thumbnail?id=18BLWmxmBsot6NhrpxdzqMztTND83x4p8&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-24",
+      "createdAt": "2026-07-08T16:00:23.000Z",
+      "name": "Lace Detailed Rayon Palazzo Set",
+      "price": 549,
+      "oldPrice": 769,
+      "image": "https://drive.google.com/thumbnail?id=12JkeGRbHfZTncLaQiYOTb3Zjrc3ttnuY&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-25",
+      "createdAt": "2026-07-08T16:00:24.000Z",
+      "name": "Elegance Floral Co-ord Set",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1EgPAL5zEFe1GscnqBcYjZ2l_RXH6UBCM&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-26",
+      "createdAt": "2026-07-08T16:00:25.000Z",
+      "name": "Designer Georgette Co-ord Set",
+      "price": 649,
+      "oldPrice": 909,
+      "image": "https://drive.google.com/thumbnail?id=1AgtUjAYjZPpustFpRRnNEKRtou-1xF0u&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-27",
+      "createdAt": "2026-07-08T16:00:26.000Z",
+      "name": "Classic Cotton Anarkali Co-ord Set",
+      "price": 699,
+      "oldPrice": 979,
+      "image": "https://drive.google.com/thumbnail?id=1f_l2vX065udNf9YxqLMcDMv26BEcmb6b&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-28",
+      "createdAt": "2026-07-08T16:00:27.000Z",
+      "name": "Premium Rayon Nyra Cut Co-ord Set",
+      "price": 749,
+      "oldPrice": 1049,
+      "image": "https://drive.google.com/thumbnail?id=129EYUxw5lu-D_-J1i3z890OqgxDHp7Q5&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-29",
+      "createdAt": "2026-07-08T16:00:28.000Z",
+      "name": "Festive Silk Co-ord Set",
+      "price": 799,
+      "oldPrice": 1119,
+      "image": "https://drive.google.com/thumbnail?id=1cy5KudE5lmb8Jd1ZOwMvminramiFO6JT&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-30",
+      "createdAt": "2026-07-08T16:00:29.000Z",
+      "name": "Casual Daily Wear Co-ord Set",
+      "price": 849,
+      "oldPrice": 1189,
+      "image": "https://drive.google.com/thumbnail?id=1L6oTVmckwaAf23saYGO_xxq9wunB1vxo&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-31",
+      "createdAt": "2026-07-08T16:00:30.000Z",
+      "name": "Stylish Rayon Co-ord Set",
+      "price": 899,
+      "oldPrice": 1259,
+      "image": "https://drive.google.com/thumbnail?id=1WOds6HGKwyQW5QuRDMnL0-F2YQgjNG-Q&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-32",
+      "createdAt": "2026-07-08T16:00:31.000Z",
+      "name": "Handblock Printed Co-ord Set",
+      "price": 949,
+      "oldPrice": 1329,
+      "image": "https://drive.google.com/thumbnail?id=1YeX6XO8G37esG4SxTFPFstvWWtKcFFEm&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-33",
+      "createdAt": "2026-07-08T16:00:32.000Z",
+      "name": "Chikankari Handwork Co-ord Set",
+      "price": 999,
+      "oldPrice": 1399,
+      "image": "https://drive.google.com/thumbnail?id=1d70tj9jDUDmS7CXPqPlktwHgfWd459wX&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-34",
+      "createdAt": "2026-07-08T16:00:33.000Z",
+      "name": "Banarasi Style Georgette Co-ord Set",
+      "price": 1049,
+      "oldPrice": 1469,
+      "image": "https://drive.google.com/thumbnail?id=19H98cBTflkpSpOl0D3sOy2c7BKGISkRf&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-35",
+      "createdAt": "2026-07-08T16:00:34.000Z",
+      "name": "Jaipuri Printed Cotton Co-ord Set",
+      "price": 1099,
+      "oldPrice": 1539,
+      "image": "https://drive.google.com/thumbnail?id=1oX8c8zwQK8MVDm145jGpd8mcx-KHsmbA&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-36",
+      "createdAt": "2026-07-08T16:00:35.000Z",
+      "name": "Lace Detailed Rayon Co-ord Set",
+      "price": 1149,
+      "oldPrice": 1609,
+      "image": "https://drive.google.com/thumbnail?id=1B8Q9kUYP3bYOgXtk1tU4_VUITCZ8rpLD&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-37",
+      "createdAt": "2026-07-08T16:00:36.000Z",
+      "name": "Elegance Floral Anarkali Gown",
+      "price": 1199,
+      "oldPrice": 1679,
+      "image": "https://drive.google.com/thumbnail?id=1dErTeuTmuNQ8EgmOSsgfbcjx37OLrLhW&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-38",
+      "createdAt": "2026-07-08T16:00:37.000Z",
+      "name": "Designer Georgette Anarkali Gown",
+      "price": 1249,
+      "oldPrice": 1749,
+      "image": "https://drive.google.com/thumbnail?id=1EIGfjyKx4_u9dtyhePi5r3v1h6xFhQ7c&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-39",
+      "createdAt": "2026-07-08T16:00:38.000Z",
+      "name": "Classic Cotton Anarkali Anarkali Gown",
+      "price": 1299,
+      "oldPrice": 1819,
+      "image": "https://drive.google.com/thumbnail?id=1J2PXPotFUUq9hisylLFpdUaxFFfOz0qL&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-40",
+      "createdAt": "2026-07-08T16:00:39.000Z",
+      "name": "Premium Rayon Nyra Cut Anarkali Gown",
+      "price": 1349,
+      "oldPrice": 1889,
+      "image": "https://drive.google.com/thumbnail?id=19kwlIpR9EvHyK9XzwuuLHZtRxBRTTXRN&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-41",
+      "createdAt": "2026-07-08T16:00:40.000Z",
+      "name": "Festive Silk Anarkali Gown",
+      "price": 1399,
+      "oldPrice": 1959,
+      "image": "https://drive.google.com/thumbnail?id=1PzFziEylMRohSzwTx5dCD8WjnTobnZx_&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-42",
+      "createdAt": "2026-07-08T16:00:41.000Z",
+      "name": "Casual Daily Wear Anarkali Gown",
+      "price": 1449,
+      "oldPrice": 2029,
+      "image": "https://drive.google.com/thumbnail?id=1BNfvc5xC_k9v6Ma3Mf8ZCKrf67xQwdr2&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-43",
+      "createdAt": "2026-07-08T16:00:42.000Z",
+      "name": "Stylish Rayon Anarkali Gown",
+      "price": 1499,
+      "oldPrice": 2099,
+      "image": "https://drive.google.com/thumbnail?id=1sb4r-zEGqm0YSTcxCgC712nI7EXTVnr5&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-44",
+      "createdAt": "2026-07-08T16:00:43.000Z",
+      "name": "Handblock Printed Anarkali Gown",
+      "price": 1549,
+      "oldPrice": 2169,
+      "image": "https://drive.google.com/thumbnail?id=1JHWSqW3bp2n5DfaHWgQjqgeWFS34QDmF&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-45",
+      "createdAt": "2026-07-08T16:00:44.000Z",
+      "name": "Chikankari Handwork Anarkali Gown",
+      "price": 499,
+      "oldPrice": 699,
+      "image": "https://drive.google.com/thumbnail?id=1E9CgADJjcYQMdwY__Ky2VXMwAERTMVWI&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-46",
+      "createdAt": "2026-07-08T16:00:45.000Z",
+      "name": "Banarasi Style Georgette Anarkali Gown",
+      "price": 549,
+      "oldPrice": 769,
+      "image": "https://drive.google.com/thumbnail?id=1t7YkeUb9OQfM5iH7Q6MHFUj-2dUHCzzz&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-kurti-47",
+      "createdAt": "2026-07-08T16:00:46.000Z",
+      "name": "Jaipuri Printed Cotton Anarkali Gown",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1Ju8OjGbhsP06fk5x-AZbavtapXuh5bbU&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-48",
+      "createdAt": "2026-07-08T16:00:47.000Z",
+      "name": "Lace Detailed Rayon Anarkali Gown",
+      "price": 649,
+      "oldPrice": 909,
+      "image": "https://drive.google.com/thumbnail?id=1HrHNjKkmHFsXvHp5-5cFtEk2-E7O-Ptk&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-49",
+      "createdAt": "2026-07-08T16:00:48.000Z",
+      "name": "Elegance Floral Straight Fit Kurta",
+      "price": 699,
+      "oldPrice": 979,
+      "image": "https://drive.google.com/thumbnail?id=1-QBYF_gQYBb97IvMUKH_wfq3Awd39TQR&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-kurti-50",
+      "createdAt": "2026-07-08T16:00:49.000Z",
+      "name": "Designer Georgette Straight Fit Kurta",
+      "price": 749,
+      "oldPrice": 1049,
+      "image": "https://drive.google.com/thumbnail?id=1RUMF_yJ5kNb4Dz8nB-jQqXyeh6dufhkq&sz=w1000",
+      "category": "Kurtis",
+      "description": "Premium quality Kurtis collection item. Handcrafted with care, perfect fit and elegant design. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-1",
+      "createdAt": "2026-07-08T16:01:00.000Z",
+      "name": "Breathable Cotton Handblock Kurta",
+      "price": 399,
+      "oldPrice": 559,
+      "image": "https://drive.google.com/thumbnail?id=1JZjlEcQybdlM1tx5Ng_aWMssA7BiXO47&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-2",
+      "createdAt": "2026-07-08T16:01:01.000Z",
+      "name": "Premium Jaipur Cotton Kurta",
+      "price": 439,
+      "oldPrice": 609,
+      "image": "https://drive.google.com/thumbnail?id=1JuCriaCbN_-PncIwYJPiU_Z709VBhzDK&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-3",
+      "createdAt": "2026-07-08T16:01:02.000Z",
+      "name": "Casual Dailywear Cotton Kurta",
+      "price": 479,
+      "oldPrice": 669,
+      "image": "https://drive.google.com/thumbnail?id=1jsyJHzxc_vheEMuvHBv3awZprnu-Pkhk&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-4",
+      "createdAt": "2026-07-08T16:01:03.000Z",
+      "name": "Lace Detailed Cotton Kurta",
+      "price": 519,
+      "oldPrice": 729,
+      "image": "https://drive.google.com/thumbnail?id=196mESdAc5dLJhJ4Yf3Mn3zcRs15m5w52&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-5",
+      "createdAt": "2026-07-08T16:01:04.000Z",
+      "name": "Chikankari Cotton Kurta",
+      "price": 559,
+      "oldPrice": 779,
+      "image": "https://drive.google.com/thumbnail?id=1awc0uqplGLHdOIVEYTbfjzLVga8IuT85&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-6",
+      "createdAt": "2026-07-08T16:01:05.000Z",
+      "name": "Indigo Printed Cotton Kurta",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1AOiQKbj12IpaV1riuVwMqXoOtYSax3XL&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-7",
+      "createdAt": "2026-07-08T16:01:06.000Z",
+      "name": "Breathable Cotton Handblock Tunic",
+      "price": 639,
+      "oldPrice": 889,
+      "image": "https://drive.google.com/thumbnail?id=1_sZ2nn8zYTwcZBk-ugoqXnhhLlucNh6w&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-8",
+      "createdAt": "2026-07-08T16:01:07.000Z",
+      "name": "Premium Jaipur Cotton Tunic",
+      "price": 679,
+      "oldPrice": 949,
+      "image": "https://drive.google.com/thumbnail?id=1VcXA7hl2UckkpuqPKoi9iLQKL9OasoPz&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-9",
+      "createdAt": "2026-07-08T16:01:08.000Z",
+      "name": "Casual Dailywear Cotton Tunic",
+      "price": 719,
+      "oldPrice": 1009,
+      "image": "https://drive.google.com/thumbnail?id=19sFoXcOPsCdO3WE27iMKY_T_UbTy0nwJ&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-10",
+      "createdAt": "2026-07-08T16:01:09.000Z",
+      "name": "Lace Detailed Cotton Tunic",
+      "price": 759,
+      "oldPrice": 1059,
+      "image": "https://drive.google.com/thumbnail?id=1YA_jfeFlry7VpWLeA-TnWsAzIPNyFpUn&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-11",
+      "createdAt": "2026-07-08T16:01:10.000Z",
+      "name": "Chikankari Cotton Tunic",
+      "price": 799,
+      "oldPrice": 1119,
+      "image": "https://drive.google.com/thumbnail?id=1HRDxjxWoW5bu9SyoS_TGm859qveluDeE&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-12",
+      "createdAt": "2026-07-08T16:01:11.000Z",
+      "name": "Indigo Printed Cotton Tunic",
+      "price": 839,
+      "oldPrice": 1169,
+      "image": "https://drive.google.com/thumbnail?id=1WcUIof_yJdq-AJhEkXcMilBgfGKDZnu1&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-13",
+      "createdAt": "2026-07-08T16:01:12.000Z",
+      "name": "Breathable Cotton Handblock Dress",
+      "price": 879,
+      "oldPrice": 1229,
+      "image": "https://drive.google.com/thumbnail?id=1A0mtGiga98BjcX4X97Ok5QDqv9fVDAS2&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-14",
+      "createdAt": "2026-07-08T16:01:13.000Z",
+      "name": "Premium Jaipur Cotton Dress",
+      "price": 919,
+      "oldPrice": 1289,
+      "image": "https://drive.google.com/thumbnail?id=1lRfVtCXhG4HOPrVwAKGdxZrA7dXGAfBg&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-15",
+      "createdAt": "2026-07-08T16:01:14.000Z",
+      "name": "Casual Dailywear Cotton Dress",
+      "price": 959,
+      "oldPrice": 1339,
+      "image": "https://drive.google.com/thumbnail?id=1OJIHVq0se2HAdenDHfQLj1ET8L0o6JMq&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-16",
+      "createdAt": "2026-07-08T16:01:15.000Z",
+      "name": "Lace Detailed Cotton Dress",
+      "price": 999,
+      "oldPrice": 1399,
+      "image": "https://drive.google.com/thumbnail?id=1z0w9ZPnrzH5Y_jtST_DmiFka_0YMakhV&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-17",
+      "createdAt": "2026-07-08T16:01:16.000Z",
+      "name": "Chikankari Cotton Dress",
+      "price": 1039,
+      "oldPrice": 1449,
+      "image": "https://drive.google.com/thumbnail?id=1JAIQqqFif2rjzgGpIfJ7a9DQuyV2fz1n&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-18",
+      "createdAt": "2026-07-08T16:01:17.000Z",
+      "name": "Indigo Printed Cotton Dress",
+      "price": 1079,
+      "oldPrice": 1509,
+      "image": "https://drive.google.com/thumbnail?id=1nP0xhGqr719qxrYYKzDfR050MYNq7xaA&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-19",
+      "createdAt": "2026-07-08T16:01:18.000Z",
+      "name": "Breathable Cotton Handblock Co-ord Set",
+      "price": 1119,
+      "oldPrice": 1569,
+      "image": "https://drive.google.com/thumbnail?id=1w8eCWfe1penXptdcrXdXyz5oll1UK1fP&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-20",
+      "createdAt": "2026-07-08T16:01:19.000Z",
+      "name": "Premium Jaipur Cotton Co-ord Set",
+      "price": 1159,
+      "oldPrice": 1619,
+      "image": "https://drive.google.com/thumbnail?id=1DcYH8Bz63jlZ7dg-u_w2REh4OYeU4ok3&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-21",
+      "createdAt": "2026-07-08T16:01:20.000Z",
+      "name": "Casual Dailywear Cotton Co-ord Set",
+      "price": 399,
+      "oldPrice": 559,
+      "image": "https://drive.google.com/thumbnail?id=19e9PnyB2EqvQLIj8RshMULWkV8aeqsaV&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-22",
+      "createdAt": "2026-07-08T16:01:21.000Z",
+      "name": "Lace Detailed Cotton Co-ord Set",
+      "price": 439,
+      "oldPrice": 609,
+      "image": "https://drive.google.com/thumbnail?id=1JgCwiEvjhcJf90nNHK0NOOUJU6YBXIGU&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-23",
+      "createdAt": "2026-07-08T16:01:22.000Z",
+      "name": "Chikankari Cotton Co-ord Set",
+      "price": 479,
+      "oldPrice": 669,
+      "image": "https://drive.google.com/thumbnail?id=18BLWmxmBsot6NhrpxdzqMztTND83x4p8&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-24",
+      "createdAt": "2026-07-08T16:01:23.000Z",
+      "name": "Indigo Printed Cotton Co-ord Set",
+      "price": 519,
+      "oldPrice": 729,
+      "image": "https://drive.google.com/thumbnail?id=12JkeGRbHfZTncLaQiYOTb3Zjrc3ttnuY&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-25",
+      "createdAt": "2026-07-08T16:01:24.000Z",
+      "name": "Breathable Cotton Handblock Kurta",
+      "price": 559,
+      "oldPrice": 779,
+      "image": "https://drive.google.com/thumbnail?id=1EgPAL5zEFe1GscnqBcYjZ2l_RXH6UBCM&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-26",
+      "createdAt": "2026-07-08T16:01:25.000Z",
+      "name": "Premium Jaipur Cotton Kurta",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1AgtUjAYjZPpustFpRRnNEKRtou-1xF0u&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-27",
+      "createdAt": "2026-07-08T16:01:26.000Z",
+      "name": "Casual Dailywear Cotton Kurta",
+      "price": 639,
+      "oldPrice": 889,
+      "image": "https://drive.google.com/thumbnail?id=1f_l2vX065udNf9YxqLMcDMv26BEcmb6b&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-28",
+      "createdAt": "2026-07-08T16:01:27.000Z",
+      "name": "Lace Detailed Cotton Kurta",
+      "price": 679,
+      "oldPrice": 949,
+      "image": "https://drive.google.com/thumbnail?id=129EYUxw5lu-D_-J1i3z890OqgxDHp7Q5&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-29",
+      "createdAt": "2026-07-08T16:01:28.000Z",
+      "name": "Chikankari Cotton Kurta",
+      "price": 719,
+      "oldPrice": 1009,
+      "image": "https://drive.google.com/thumbnail?id=1cy5KudE5lmb8Jd1ZOwMvminramiFO6JT&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-30",
+      "createdAt": "2026-07-08T16:01:29.000Z",
+      "name": "Indigo Printed Cotton Kurta",
+      "price": 759,
+      "oldPrice": 1059,
+      "image": "https://drive.google.com/thumbnail?id=1L6oTVmckwaAf23saYGO_xxq9wunB1vxo&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-31",
+      "createdAt": "2026-07-08T16:01:30.000Z",
+      "name": "Breathable Cotton Handblock Tunic",
+      "price": 799,
+      "oldPrice": 1119,
+      "image": "https://drive.google.com/thumbnail?id=1WOds6HGKwyQW5QuRDMnL0-F2YQgjNG-Q&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-32",
+      "createdAt": "2026-07-08T16:01:31.000Z",
+      "name": "Premium Jaipur Cotton Tunic",
+      "price": 839,
+      "oldPrice": 1169,
+      "image": "https://drive.google.com/thumbnail?id=1YeX6XO8G37esG4SxTFPFstvWWtKcFFEm&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-33",
+      "createdAt": "2026-07-08T16:01:32.000Z",
+      "name": "Casual Dailywear Cotton Tunic",
+      "price": 879,
+      "oldPrice": 1229,
+      "image": "https://drive.google.com/thumbnail?id=1d70tj9jDUDmS7CXPqPlktwHgfWd459wX&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-34",
+      "createdAt": "2026-07-08T16:01:33.000Z",
+      "name": "Lace Detailed Cotton Tunic",
+      "price": 919,
+      "oldPrice": 1289,
+      "image": "https://drive.google.com/thumbnail?id=19H98cBTflkpSpOl0D3sOy2c7BKGISkRf&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-35",
+      "createdAt": "2026-07-08T16:01:34.000Z",
+      "name": "Chikankari Cotton Tunic",
+      "price": 959,
+      "oldPrice": 1339,
+      "image": "https://drive.google.com/thumbnail?id=1oX8c8zwQK8MVDm145jGpd8mcx-KHsmbA&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-36",
+      "createdAt": "2026-07-08T16:01:35.000Z",
+      "name": "Indigo Printed Cotton Tunic",
+      "price": 999,
+      "oldPrice": 1399,
+      "image": "https://drive.google.com/thumbnail?id=1B8Q9kUYP3bYOgXtk1tU4_VUITCZ8rpLD&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-37",
+      "createdAt": "2026-07-08T16:01:36.000Z",
+      "name": "Breathable Cotton Handblock Dress",
+      "price": 1039,
+      "oldPrice": 1449,
+      "image": "https://drive.google.com/thumbnail?id=1dErTeuTmuNQ8EgmOSsgfbcjx37OLrLhW&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-38",
+      "createdAt": "2026-07-08T16:01:37.000Z",
+      "name": "Premium Jaipur Cotton Dress",
+      "price": 1079,
+      "oldPrice": 1509,
+      "image": "https://drive.google.com/thumbnail?id=1EIGfjyKx4_u9dtyhePi5r3v1h6xFhQ7c&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-39",
+      "createdAt": "2026-07-08T16:01:38.000Z",
+      "name": "Casual Dailywear Cotton Dress",
+      "price": 1119,
+      "oldPrice": 1569,
+      "image": "https://drive.google.com/thumbnail?id=1J2PXPotFUUq9hisylLFpdUaxFFfOz0qL&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-40",
+      "createdAt": "2026-07-08T16:01:39.000Z",
+      "name": "Lace Detailed Cotton Dress",
+      "price": 1159,
+      "oldPrice": 1619,
+      "image": "https://drive.google.com/thumbnail?id=19kwlIpR9EvHyK9XzwuuLHZtRxBRTTXRN&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-41",
+      "createdAt": "2026-07-08T16:01:40.000Z",
+      "name": "Chikankari Cotton Dress",
+      "price": 399,
+      "oldPrice": 559,
+      "image": "https://drive.google.com/thumbnail?id=1PzFziEylMRohSzwTx5dCD8WjnTobnZx_&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-42",
+      "createdAt": "2026-07-08T16:01:41.000Z",
+      "name": "Indigo Printed Cotton Dress",
+      "price": 439,
+      "oldPrice": 609,
+      "image": "https://drive.google.com/thumbnail?id=1BNfvc5xC_k9v6Ma3Mf8ZCKrf67xQwdr2&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-43",
+      "createdAt": "2026-07-08T16:01:42.000Z",
+      "name": "Breathable Cotton Handblock Co-ord Set",
+      "price": 479,
+      "oldPrice": 669,
+      "image": "https://drive.google.com/thumbnail?id=1sb4r-zEGqm0YSTcxCgC712nI7EXTVnr5&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-44",
+      "createdAt": "2026-07-08T16:01:43.000Z",
+      "name": "Premium Jaipur Cotton Co-ord Set",
+      "price": 519,
+      "oldPrice": 729,
+      "image": "https://drive.google.com/thumbnail?id=1JHWSqW3bp2n5DfaHWgQjqgeWFS34QDmF&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-45",
+      "createdAt": "2026-07-08T16:01:44.000Z",
+      "name": "Casual Dailywear Cotton Co-ord Set",
+      "price": 559,
+      "oldPrice": 779,
+      "image": "https://drive.google.com/thumbnail?id=1E9CgADJjcYQMdwY__Ky2VXMwAERTMVWI&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-46",
+      "createdAt": "2026-07-08T16:01:45.000Z",
+      "name": "Lace Detailed Cotton Co-ord Set",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1t7YkeUb9OQfM5iH7Q6MHFUj-2dUHCzzz&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-female-cotton-47",
+      "createdAt": "2026-07-08T16:01:46.000Z",
+      "name": "Chikankari Cotton Co-ord Set",
+      "price": 639,
+      "oldPrice": 889,
+      "image": "https://drive.google.com/thumbnail?id=1Ju8OjGbhsP06fk5x-AZbavtapXuh5bbU&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-48",
+      "createdAt": "2026-07-08T16:01:47.000Z",
+      "name": "Indigo Printed Cotton Co-ord Set",
+      "price": 679,
+      "oldPrice": 949,
+      "image": "https://drive.google.com/thumbnail?id=1HrHNjKkmHFsXvHp5-5cFtEk2-E7O-Ptk&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-49",
+      "createdAt": "2026-07-08T16:01:48.000Z",
+      "name": "Breathable Cotton Handblock Kurta",
+      "price": 719,
+      "oldPrice": 1009,
+      "image": "https://drive.google.com/thumbnail?id=1-QBYF_gQYBb97IvMUKH_wfq3Awd39TQR&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-female-cotton-50",
+      "createdAt": "2026-07-08T16:01:49.000Z",
+      "name": "Premium Jaipur Cotton Kurta",
+      "price": 759,
+      "oldPrice": 1059,
+      "image": "https://drive.google.com/thumbnail?id=1RUMF_yJ5kNb4Dz8nB-jQqXyeh6dufhkq&sz=w1000",
+      "category": "Cotton",
+      "description": "Breathable high-quality Cotton collection item. Perfect for daily wear, light and comfortable. Hosted securely on Google Drive.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-female-saree-1",
+      "createdAt": "2026-07-08T16:02:00.000Z",
+      "name": "Traditional Kanchipuram Silk Saree",
+      "price": 1999,
+      "oldPrice": 2799,
+      "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop",
+      "category": "Sarees",
+      "description": "Premium traditional sarees collection item. Temporary placeholder (Google Drive images to be added later by user).",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": true
+    },
+    {
+      "id": "prod-female-saree-2",
+      "createdAt": "2026-07-08T16:02:01.000Z",
+      "name": "Banarasi Georgette Saree",
+      "price": 2499,
+      "oldPrice": 3499,
+      "image": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?w=800&auto=format&fit=crop",
+      "category": "Sarees",
+      "description": "Premium traditional sarees collection item. Temporary placeholder (Google Drive images to be added later by user).",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-female-saree-3",
+      "createdAt": "2026-07-08T16:02:02.000Z",
+      "name": "Elegant Chiffon Saree",
+      "price": 1499,
+      "oldPrice": 2099,
+      "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop",
+      "category": "Sarees",
+      "description": "Premium traditional sarees collection item. Temporary placeholder (Google Drive images to be added later by user).",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-female-saree-4",
+      "createdAt": "2026-07-08T16:02:03.000Z",
+      "name": "Cotton Linen Saree",
+      "price": 1299,
+      "oldPrice": 1819,
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop",
+      "category": "Sarees",
+      "description": "Premium traditional sarees collection item. Temporary placeholder (Google Drive images to be added later by user).",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-female-saree-5",
+      "createdAt": "2026-07-08T16:02:04.000Z",
+      "name": "Designer Crimson Satin Saree",
+      "price": 2899,
+      "oldPrice": 4059,
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop",
+      "category": "Sarees",
+      "description": "Premium traditional sarees collection item. Temporary placeholder (Google Drive images to be added later by user).",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-1",
+      "createdAt": "2026-07-08T16:03:00.000Z",
+      "name": "Cotton Printed Frock",
+      "price": 299,
+      "oldPrice": 419,
+      "image": "https://drive.google.com/thumbnail?id=1N29WZAR_QD1pahS4wYtPITjPBfC1AA9m&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-2",
+      "createdAt": "2026-07-08T16:03:01.000Z",
+      "name": "Soft Summer Frock",
+      "price": 329,
+      "oldPrice": 459,
+      "image": "https://drive.google.com/thumbnail?id=1jjzhAYcHPZHUQbxfpRoFUDwKuWLrGDwd&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-3",
+      "createdAt": "2026-07-08T16:03:02.000Z",
+      "name": "Embroidered Frock",
+      "price": 359,
+      "oldPrice": 499,
+      "image": "https://drive.google.com/thumbnail?id=1H4R5Hu5jbdLLcu72DmEiVYLYF-fsDU8I&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-4",
+      "createdAt": "2026-07-08T16:03:03.000Z",
+      "name": "Floral Ruffle Frock",
+      "price": 389,
+      "oldPrice": 539,
+      "image": "https://drive.google.com/thumbnail?id=1ALIvU0TOJQuuPgjumivOaD29NdKgl75x&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 13,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-5",
+      "createdAt": "2026-07-08T16:03:04.000Z",
+      "name": "Casual Play Frock",
+      "price": 419,
+      "oldPrice": 589,
+      "image": "https://drive.google.com/thumbnail?id=1T7QY8Y_5e7qKa5X3DrDKpZ2nYW3FU1mR&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 14,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-6",
+      "createdAt": "2026-07-08T16:03:05.000Z",
+      "name": "Premium Party Frock",
+      "price": 449,
+      "oldPrice": 629,
+      "image": "https://drive.google.com/thumbnail?id=1tbAIMjPXO0BJmJZYIcg_CjauhKpIDRRC&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-7",
+      "createdAt": "2026-07-08T16:03:06.000Z",
+      "name": "Denim Style Frock",
+      "price": 479,
+      "oldPrice": 669,
+      "image": "https://drive.google.com/thumbnail?id=1eyT-zRIenqLgII56O0O8kvzBkVqngZy6&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-8",
+      "createdAt": "2026-07-08T16:03:07.000Z",
+      "name": "Classic Striped Frock",
+      "price": 509,
+      "oldPrice": 709,
+      "image": "https://drive.google.com/thumbnail?id=1xONTka5QxZxzmRCxydlaIRmvgz5e2MrS&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-9",
+      "createdAt": "2026-07-08T16:03:08.000Z",
+      "name": "Polka Dot Frock",
+      "price": 539,
+      "oldPrice": 749,
+      "image": "https://drive.google.com/thumbnail?id=1C9wySkWlmLHbSFFU3cthv1KllGu3lTNg&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-10",
+      "createdAt": "2026-07-08T16:03:09.000Z",
+      "name": "Soft Knit Frock",
+      "price": 569,
+      "oldPrice": 799,
+      "image": "https://drive.google.com/thumbnail?id=108fYNmsv7_T44dBP6eFnSNXbTgsYzWrO&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-11",
+      "createdAt": "2026-07-08T16:03:10.000Z",
+      "name": "Festive Wear Frock",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=12zf3QbGdGsUo5HiQzzmS7pVqbH6-N_ZZ&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-12",
+      "createdAt": "2026-07-08T16:03:11.000Z",
+      "name": "Breathable Cotton Frock",
+      "price": 629,
+      "oldPrice": 879,
+      "image": "https://drive.google.com/thumbnail?id=1l9Aum7fZ9auj-wWgKMQq5NsHkyuhjAOZ&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-13",
+      "createdAt": "2026-07-08T16:03:12.000Z",
+      "name": "Cotton Printed Dress",
+      "price": 659,
+      "oldPrice": 919,
+      "image": "https://drive.google.com/thumbnail?id=10SFO8YRd2ktYgSjpd6Zk_ZCEia-PG_o7&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-14",
+      "createdAt": "2026-07-08T16:03:13.000Z",
+      "name": "Soft Summer Dress",
+      "price": 689,
+      "oldPrice": 959,
+      "image": "https://drive.google.com/thumbnail?id=1Q6pB0PTpaHxNXv2TfGjIs4Fu5I4Ic12N&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-15",
+      "createdAt": "2026-07-08T16:03:14.000Z",
+      "name": "Embroidered Dress",
+      "price": 719,
+      "oldPrice": 1009,
+      "image": "https://drive.google.com/thumbnail?id=1u_IW18-J6wMCGodJNYMjpQfLLofGThJq&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-16",
+      "createdAt": "2026-07-08T16:03:15.000Z",
+      "name": "Floral Ruffle Dress",
+      "price": 749,
+      "oldPrice": 1049,
+      "image": "https://drive.google.com/thumbnail?id=18zNADbkisNF5iuIntGlZMNWfNHxzZ_Fh&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-17",
+      "createdAt": "2026-07-08T16:03:16.000Z",
+      "name": "Casual Play Dress",
+      "price": 779,
+      "oldPrice": 1089,
+      "image": "https://drive.google.com/thumbnail?id=1KxMTkIPLsFjoIRL7vwycMN3UgG4oNhwv&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-18",
+      "createdAt": "2026-07-08T16:03:17.000Z",
+      "name": "Premium Party Dress",
+      "price": 309,
+      "oldPrice": 429,
+      "image": "https://drive.google.com/thumbnail?id=1chccnyNSd2NwfqGw-6OACLW49IaSQdIk&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-19",
+      "createdAt": "2026-07-08T16:03:18.000Z",
+      "name": "Denim Style Dress",
+      "price": 339,
+      "oldPrice": 469,
+      "image": "https://drive.google.com/thumbnail?id=14k7GLR1LLkxl5MkiPDWxhPbCAk-utAEG&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 13,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-20",
+      "createdAt": "2026-07-08T16:03:19.000Z",
+      "name": "Classic Striped Dress",
+      "price": 369,
+      "oldPrice": 519,
+      "image": "https://drive.google.com/thumbnail?id=1NFohrysDQzG-xoRNT2oDM5FjMp4XER-D&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 14,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-21",
+      "createdAt": "2026-07-08T16:03:20.000Z",
+      "name": "Polka Dot Dress",
+      "price": 399,
+      "oldPrice": 559,
+      "image": "https://drive.google.com/thumbnail?id=1Fgg5F4cJtF--8haUD5OI0UoIDPqJvNG1&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-22",
+      "createdAt": "2026-07-08T16:03:21.000Z",
+      "name": "Soft Knit Dress",
+      "price": 429,
+      "oldPrice": 599,
+      "image": "https://drive.google.com/thumbnail?id=1Q5Z6CxpEPWZg2q6-jvuJzkTwGxajpPGM&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-23",
+      "createdAt": "2026-07-08T16:03:22.000Z",
+      "name": "Festive Wear Dress",
+      "price": 459,
+      "oldPrice": 639,
+      "image": "https://drive.google.com/thumbnail?id=1b9FGmggz5x4Ay464VAqudzVcURlqAxPu&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-24",
+      "createdAt": "2026-07-08T16:03:23.000Z",
+      "name": "Breathable Cotton Dress",
+      "price": 489,
+      "oldPrice": 679,
+      "image": "https://drive.google.com/thumbnail?id=1llBEvdOpioUuOrDs5h7_d7CJM2KWUPV4&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-25",
+      "createdAt": "2026-07-08T16:03:24.000Z",
+      "name": "Cotton Printed Co-ord Set",
+      "price": 519,
+      "oldPrice": 729,
+      "image": "https://drive.google.com/thumbnail?id=151Rbw3VcWzTRrjJ1_-T1_9TiAFg_sHUs&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-26",
+      "createdAt": "2026-07-08T16:03:25.000Z",
+      "name": "Soft Summer Co-ord Set",
+      "price": 549,
+      "oldPrice": 769,
+      "image": "https://drive.google.com/thumbnail?id=10_CnMXwe5r2UmgtnlpSdZmMMEMuD1szw&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-27",
+      "createdAt": "2026-07-08T16:03:26.000Z",
+      "name": "Embroidered Co-ord Set",
+      "price": 579,
+      "oldPrice": 809,
+      "image": "https://drive.google.com/thumbnail?id=17mSKUn3jDaIKVpyBRNo9x3x-iNp1S8Wm&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-28",
+      "createdAt": "2026-07-08T16:03:27.000Z",
+      "name": "Floral Ruffle Co-ord Set",
+      "price": 609,
+      "oldPrice": 849,
+      "image": "https://drive.google.com/thumbnail?id=1EmAU1BFiJW3ThNgXKKiAwWXvsCan6BJ3&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-29",
+      "createdAt": "2026-07-08T16:03:28.000Z",
+      "name": "Casual Play Co-ord Set",
+      "price": 639,
+      "oldPrice": 889,
+      "image": "https://drive.google.com/thumbnail?id=1E1DSJwlfpAek4Mnx-TDcHSvST2ccl2X6&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-30",
+      "createdAt": "2026-07-08T16:03:29.000Z",
+      "name": "Premium Party Co-ord Set",
+      "price": 669,
+      "oldPrice": 939,
+      "image": "https://drive.google.com/thumbnail?id=1cSqkIcaT_8mKyyvXpM23aR-QWS3rHBWm&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-31",
+      "createdAt": "2026-07-08T16:03:30.000Z",
+      "name": "Denim Style Co-ord Set",
+      "price": 699,
+      "oldPrice": 979,
+      "image": "https://drive.google.com/thumbnail?id=10yR7TpfKySSZ2_9uF5iCxBjamtlruJNP&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-32",
+      "createdAt": "2026-07-08T16:03:31.000Z",
+      "name": "Classic Striped Co-ord Set",
+      "price": 729,
+      "oldPrice": 1019,
+      "image": "https://drive.google.com/thumbnail?id=1Rcybw630ntb-VC1iyDEp43Z-QOCJ-85e&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-33",
+      "createdAt": "2026-07-08T16:03:32.000Z",
+      "name": "Polka Dot Co-ord Set",
+      "price": 759,
+      "oldPrice": 1059,
+      "image": "https://drive.google.com/thumbnail?id=18eBQKe1dJ0vUzvJcBjgYK9iieUx3NTBU&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-34",
+      "createdAt": "2026-07-08T16:03:33.000Z",
+      "name": "Soft Knit Co-ord Set",
+      "price": 789,
+      "oldPrice": 1099,
+      "image": "https://drive.google.com/thumbnail?id=11_WqUaWF3TBbIURIxS9KNmJ6x0xDB3Qe&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 13,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-35",
+      "createdAt": "2026-07-08T16:03:34.000Z",
+      "name": "Festive Wear Co-ord Set",
+      "price": 319,
+      "oldPrice": 449,
+      "image": "https://drive.google.com/thumbnail?id=1Y6SAhJfXgDjDa9VdsoxsI8gb2nuPJPDY&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 14,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-36",
+      "createdAt": "2026-07-08T16:03:35.000Z",
+      "name": "Breathable Cotton Co-ord Set",
+      "price": 349,
+      "oldPrice": 489,
+      "image": "https://drive.google.com/thumbnail?id=1sjy2rK3ob4_J8U5rP5j-DGFQH3WuHWUu&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-37",
+      "createdAt": "2026-07-08T16:03:36.000Z",
+      "name": "Cotton Printed Jumpsuit",
+      "price": 379,
+      "oldPrice": 529,
+      "image": "https://drive.google.com/thumbnail?id=1DaxWitL_ujs0JT6Xbp1aIdwwcH4tWkiR&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 16,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-38",
+      "createdAt": "2026-07-08T16:03:37.000Z",
+      "name": "Soft Summer Jumpsuit",
+      "price": 409,
+      "oldPrice": 569,
+      "image": "https://drive.google.com/thumbnail?id=1cX75ZdTDpHs5FEYMk3ColYQZguHf87Pa&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 17,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-39",
+      "createdAt": "2026-07-08T16:03:38.000Z",
+      "name": "Embroidered Jumpsuit",
+      "price": 439,
+      "oldPrice": 609,
+      "image": "https://drive.google.com/thumbnail?id=1uPxBBIkmX-SN_bHNb15j-hcZxDfSq5Vo&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 18,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-40",
+      "createdAt": "2026-07-08T16:03:39.000Z",
+      "name": "Floral Ruffle Jumpsuit",
+      "price": 469,
+      "oldPrice": 659,
+      "image": "https://drive.google.com/thumbnail?id=1wAfL1PxTni-8faQax_1uhnkxXFZWQ4pj&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 19,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-41",
+      "createdAt": "2026-07-08T16:03:40.000Z",
+      "name": "Casual Play Jumpsuit",
+      "price": 499,
+      "oldPrice": 699,
+      "image": "https://drive.google.com/thumbnail?id=1Jp50pkTE7da9VzZXrtSnH0JyUkZmiS2m&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 20,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-42",
+      "createdAt": "2026-07-08T16:03:41.000Z",
+      "name": "Premium Party Jumpsuit",
+      "price": 529,
+      "oldPrice": 739,
+      "image": "https://drive.google.com/thumbnail?id=1hGb1rAM8uMavkKfFYHcBjrysuDoFzfJ8&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 21,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-43",
+      "createdAt": "2026-07-08T16:03:42.000Z",
+      "name": "Denim Style Jumpsuit",
+      "price": 559,
+      "oldPrice": 779,
+      "image": "https://drive.google.com/thumbnail?id=1LFtTPsejFRt497-fYuL_zgxwe-XR-svF&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 22,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-44",
+      "createdAt": "2026-07-08T16:03:43.000Z",
+      "name": "Classic Striped Jumpsuit",
+      "price": 589,
+      "oldPrice": 819,
+      "image": "https://drive.google.com/thumbnail?id=1prYIHosvGZ2RQ9omKKtfXxOrTyBhy39V&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 23,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-45",
+      "createdAt": "2026-07-08T16:03:44.000Z",
+      "name": "Polka Dot Jumpsuit",
+      "price": 619,
+      "oldPrice": 869,
+      "image": "https://drive.google.com/thumbnail?id=1jki4P9UPmbCEarSGzCPuV8Xur2kNLtIn&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 24,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-46",
+      "createdAt": "2026-07-08T16:03:45.000Z",
+      "name": "Soft Knit Jumpsuit",
+      "price": 649,
+      "oldPrice": 909,
+      "image": "https://drive.google.com/thumbnail?id=1t8VfTAJQq4fQ872cWoJn-G1szMWs7818&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": true
+    },
+    {
+      "id": "prod-kids-47",
+      "createdAt": "2026-07-08T16:03:46.000Z",
+      "name": "Festive Wear Jumpsuit",
+      "price": 679,
+      "oldPrice": 949,
+      "image": "https://drive.google.com/thumbnail?id=1-Q3W6w7kBhlLo68-XnkoFRXcSY12zT8-&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-48",
+      "createdAt": "2026-07-08T16:03:47.000Z",
+      "name": "Breathable Cotton Jumpsuit",
+      "price": 709,
+      "oldPrice": 989,
+      "image": "https://drive.google.com/thumbnail?id=1btS-ITSQpjc7egsUe6ulDEtL-r5bwjkq&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-49",
+      "createdAt": "2026-07-08T16:03:48.000Z",
+      "name": "Cotton Printed T-Shirt & Shorts Set",
+      "price": 739,
+      "oldPrice": 1029,
+      "image": "https://drive.google.com/thumbnail?id=1uZkySL7EWb5jf0iI_lc92POd-Fgr14md&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 13,
+      "featured": false
+    },
+    {
+      "id": "prod-kids-50",
+      "createdAt": "2026-07-08T16:03:49.000Z",
+      "name": "Soft Summer T-Shirt & Shorts Set",
+      "price": 769,
+      "oldPrice": 1079,
+      "image": "https://drive.google.com/thumbnail?id=1SDrItsnPGsiYq431NTfIAFd_WaNOfGRc&sz=w1000",
+      "category": "Kids Collections",
+      "description": "Soft, skin-friendly, and durable kids outfits. Perfect fit and playful designs. Hosted securely on Google Drive.",
+      "sizes": [
+        "2-4 Y",
+        "4-6 Y",
+        "6-8 Y"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 14,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-1",
+      "createdAt": "2026-07-08T16:04:00.000Z",
+      "name": "Antique Gold Finish Bangles Set",
+      "price": 199,
+      "oldPrice": 279,
+      "image": "https://drive.google.com/thumbnail?id=1HzDQpnXk1iOLYiO8gTU948DPJ6LSOoA8&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 5,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-2",
+      "createdAt": "2026-07-08T16:04:01.000Z",
+      "name": "Traditional Kundan Bangles Set",
+      "price": 249,
+      "oldPrice": 349,
+      "image": "https://drive.google.com/thumbnail?id=1G0f2OAKQm1nSbIPY8IOR38YMcIZS87KZ&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 6,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-3",
+      "createdAt": "2026-07-08T16:04:02.000Z",
+      "name": "Elegant Pearl Drop Bangles Set",
+      "price": 299,
+      "oldPrice": 419,
+      "image": "https://drive.google.com/thumbnail?id=11QD4iSWeTDsoYtAq32XpFdDxw7vGFlNE&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 7,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-4",
+      "createdAt": "2026-07-08T16:04:03.000Z",
+      "name": "American Diamond Bangles Set",
+      "price": 349,
+      "oldPrice": 489,
+      "image": "https://drive.google.com/thumbnail?id=1QWJMz4hgTwSRF52wa0kBgY012s-Pcz7y&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 8,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-5",
+      "createdAt": "2026-07-08T16:04:04.000Z",
+      "name": "Royal Temple Work Bangles Set",
+      "price": 399,
+      "oldPrice": 559,
+      "image": "https://drive.google.com/thumbnail?id=1J_2n4iZqrDr9jcGclc0QIql0x8NdRJIM&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 9,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-6",
+      "createdAt": "2026-07-08T16:04:05.000Z",
+      "name": "Bridal Choker Bangles Set",
+      "price": 449,
+      "oldPrice": 629,
+      "image": "https://drive.google.com/thumbnail?id=1dLlPAqd3gkG1jGRlgy9PO6B50plKjqBu&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-7",
+      "createdAt": "2026-07-08T16:04:06.000Z",
+      "name": "Delicate Micro Gold Bangles Set",
+      "price": 499,
+      "oldPrice": 699,
+      "image": "https://drive.google.com/thumbnail?id=1C62YQgq5LMSp9UBOEmxM4f5Yfb46FxKy&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-8",
+      "createdAt": "2026-07-08T16:04:07.000Z",
+      "name": "Classic Matte Finish Bangles Set",
+      "price": 549,
+      "oldPrice": 769,
+      "image": "https://drive.google.com/thumbnail?id=1oxLmdxOtjiUSp7jCw77vLeb4OpeRRfsl&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-9",
+      "createdAt": "2026-07-08T16:04:08.000Z",
+      "name": "Kemp Stone Studded Bangles Set",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1wqiurXAR7KHrebHFHD9qJts4wE3kR9sK&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 5,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-10",
+      "createdAt": "2026-07-08T16:04:09.000Z",
+      "name": "Designer CZ Stone Bangles Set",
+      "price": 649,
+      "oldPrice": 909,
+      "image": "https://drive.google.com/thumbnail?id=1rqgKDVZNjtDfKK0BMwXdD0J6YuJl7bZy&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 6,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-11",
+      "createdAt": "2026-07-08T16:04:10.000Z",
+      "name": "Floral Meenakari Bangles Set",
+      "price": 699,
+      "oldPrice": 979,
+      "image": "https://drive.google.com/thumbnail?id=1BtzZu1VwJom0w8m1TOsALaKn79XGDcWL&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 7,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-12",
+      "createdAt": "2026-07-08T16:04:11.000Z",
+      "name": "Antique Gold Finish Choker Set",
+      "price": 749,
+      "oldPrice": 1049,
+      "image": "https://drive.google.com/thumbnail?id=1ZRGKBINfZtB54tDJ_BXbhdIg8Cke9UEH&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 8,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-13",
+      "createdAt": "2026-07-08T16:04:12.000Z",
+      "name": "Traditional Kundan Choker Set",
+      "price": 799,
+      "oldPrice": 1119,
+      "image": "https://drive.google.com/thumbnail?id=1ka3GTr6Jt9ivl5Suto50ya7GSwZ9riHb&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 9,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-14",
+      "createdAt": "2026-07-08T16:04:13.000Z",
+      "name": "Elegant Pearl Drop Choker Set",
+      "price": 849,
+      "oldPrice": 1189,
+      "image": "https://drive.google.com/thumbnail?id=18SuAX62c0hqI5Jn_YfOxyuQ76lwZzsXi&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-15",
+      "createdAt": "2026-07-08T16:04:14.000Z",
+      "name": "American Diamond Choker Set",
+      "price": 899,
+      "oldPrice": 1259,
+      "image": "https://drive.google.com/thumbnail?id=1niX96gy6KUrjByrHSyU4t7OIu1bFhgUg&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-16",
+      "createdAt": "2026-07-08T16:04:15.000Z",
+      "name": "Royal Temple Work Choker Set",
+      "price": 949,
+      "oldPrice": 1329,
+      "image": "https://drive.google.com/thumbnail?id=1D56QAkSDKP7Y_auo1zVLF-bPro9u8xWa&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-17",
+      "createdAt": "2026-07-08T16:04:16.000Z",
+      "name": "Bridal Choker Choker Set",
+      "price": 999,
+      "oldPrice": 1399,
+      "image": "https://drive.google.com/thumbnail?id=1SZkeieHQYIEmho0AwAQ-jDay3xnV6jiQ&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 5,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-18",
+      "createdAt": "2026-07-08T16:04:17.000Z",
+      "name": "Delicate Micro Gold Choker Set",
+      "price": 1049,
+      "oldPrice": 1469,
+      "image": "https://drive.google.com/thumbnail?id=15pK0P9zJAIqWJWV-dkdNHoazarDkdZCx&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 6,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-19",
+      "createdAt": "2026-07-08T16:04:18.000Z",
+      "name": "Classic Matte Finish Choker Set",
+      "price": 1099,
+      "oldPrice": 1539,
+      "image": "https://drive.google.com/thumbnail?id=1N0mL1oXi1g4MMVoCZxOabpaqIi7xb_Fn&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 7,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-20",
+      "createdAt": "2026-07-08T16:04:19.000Z",
+      "name": "Kemp Stone Studded Choker Set",
+      "price": 1149,
+      "oldPrice": 1609,
+      "image": "https://drive.google.com/thumbnail?id=1wxlOLAv-vOibChXwxboYM064ioaDM8dD&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 8,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-21",
+      "createdAt": "2026-07-08T16:04:20.000Z",
+      "name": "Designer CZ Stone Choker Set",
+      "price": 1199,
+      "oldPrice": 1679,
+      "image": "https://drive.google.com/thumbnail?id=1BiqJPMhYnOTTSkYA718WfGhs3SUXUWlb&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 9,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-22",
+      "createdAt": "2026-07-08T16:04:21.000Z",
+      "name": "Floral Meenakari Choker Set",
+      "price": 1249,
+      "oldPrice": 1749,
+      "image": "https://drive.google.com/thumbnail?id=1p38YTVxg4pTbKqy7MFzoL34oL9CCISvg&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-23",
+      "createdAt": "2026-07-08T16:04:22.000Z",
+      "name": "Antique Gold Finish Necklace",
+      "price": 199,
+      "oldPrice": 279,
+      "image": "https://drive.google.com/thumbnail?id=1REzHw0EhKBbh6hXbJTss44BKmZsQyQ9w&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-24",
+      "createdAt": "2026-07-08T16:04:23.000Z",
+      "name": "Traditional Kundan Necklace",
+      "price": 249,
+      "oldPrice": 349,
+      "image": "https://drive.google.com/thumbnail?id=1g2VepgPe-G5vIlEem_Cktet-PdpeCmq1&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-25",
+      "createdAt": "2026-07-08T16:04:24.000Z",
+      "name": "Elegant Pearl Drop Necklace",
+      "price": 299,
+      "oldPrice": 419,
+      "image": "https://drive.google.com/thumbnail?id=1-Z5I-OuS4hZ-eqOdEBJ9IfZONnduAAxr&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 5,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-26",
+      "createdAt": "2026-07-08T16:04:25.000Z",
+      "name": "American Diamond Necklace",
+      "price": 349,
+      "oldPrice": 489,
+      "image": "https://drive.google.com/thumbnail?id=1fNYe3QM5PM3fl33pwJa0ZyXPFEJSiPEh&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 6,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-27",
+      "createdAt": "2026-07-08T16:04:26.000Z",
+      "name": "Royal Temple Work Necklace",
+      "price": 399,
+      "oldPrice": 559,
+      "image": "https://drive.google.com/thumbnail?id=1yECOgab47ig5sgR7ruKVqs-BATEjqk80&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 7,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-28",
+      "createdAt": "2026-07-08T16:04:27.000Z",
+      "name": "Bridal Choker Necklace",
+      "price": 449,
+      "oldPrice": 629,
+      "image": "https://drive.google.com/thumbnail?id=1WGJcd4voRqYYv5cyOtSgnkJS9dewrPkk&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 8,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-29",
+      "createdAt": "2026-07-08T16:04:28.000Z",
+      "name": "Delicate Micro Gold Necklace",
+      "price": 499,
+      "oldPrice": 699,
+      "image": "https://drive.google.com/thumbnail?id=1dP22MgIxpGs4iJ3fiql-wXRU9cQ8268s&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 9,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-30",
+      "createdAt": "2026-07-08T16:04:29.000Z",
+      "name": "Classic Matte Finish Necklace",
+      "price": 549,
+      "oldPrice": 769,
+      "image": "https://drive.google.com/thumbnail?id=1sTh-m4Y4OlqZvD6dONBMesvun7Gj6AaE&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-31",
+      "createdAt": "2026-07-08T16:04:30.000Z",
+      "name": "Kemp Stone Studded Necklace",
+      "price": 599,
+      "oldPrice": 839,
+      "image": "https://drive.google.com/thumbnail?id=1kiuV3RjZdbKPDx5kpoMtBoa6-l6pMyHc&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-32",
+      "createdAt": "2026-07-08T16:04:31.000Z",
+      "name": "Designer CZ Stone Necklace",
+      "price": 649,
+      "oldPrice": 909,
+      "image": "https://drive.google.com/thumbnail?id=1zmRvyhaxrdj27E1d9xQhIk0uGeOGbDpy&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-33",
+      "createdAt": "2026-07-08T16:04:32.000Z",
+      "name": "Floral Meenakari Necklace",
+      "price": 699,
+      "oldPrice": 979,
+      "image": "https://drive.google.com/thumbnail?id=1Karoqa-oIO9cgJlVZk3ZEzduMZewEsF6&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 5,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-34",
+      "createdAt": "2026-07-08T16:04:33.000Z",
+      "name": "Antique Gold Finish Earrings",
+      "price": 749,
+      "oldPrice": 1049,
+      "image": "https://drive.google.com/thumbnail?id=1RiCJj4ShOJPyLHJkSHGd77S0mOGuhTyB&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 6,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-35",
+      "createdAt": "2026-07-08T16:04:34.000Z",
+      "name": "Traditional Kundan Earrings",
+      "price": 799,
+      "oldPrice": 1119,
+      "image": "https://drive.google.com/thumbnail?id=1KgtvCrAzSyIR6yb6TJSuQfJ8Ok_TLYKj&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 7,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-36",
+      "createdAt": "2026-07-08T16:04:35.000Z",
+      "name": "Elegant Pearl Drop Earrings",
+      "price": 849,
+      "oldPrice": 1189,
+      "image": "https://drive.google.com/thumbnail?id=1PkUlIExWZzsZDl3VFihdz4-IiMsChlPb&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 8,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-37",
+      "createdAt": "2026-07-08T16:04:36.000Z",
+      "name": "American Diamond Earrings",
+      "price": 899,
+      "oldPrice": 1259,
+      "image": "https://drive.google.com/thumbnail?id=1rFEZRVB3mfEOO73YQtaLgqM-APrAzWFe&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 9,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-38",
+      "createdAt": "2026-07-08T16:04:37.000Z",
+      "name": "Royal Temple Work Earrings",
+      "price": 949,
+      "oldPrice": 1329,
+      "image": "https://drive.google.com/thumbnail?id=1ro2YHqaF3jCNkuT9Blx16eDyOvQcrZzC&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-39",
+      "createdAt": "2026-07-08T16:04:38.000Z",
+      "name": "Bridal Choker Earrings",
+      "price": 999,
+      "oldPrice": 1399,
+      "image": "https://drive.google.com/thumbnail?id=1yRnq9SDQKt3LwWyL1hwFLxSyYWKXolir&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-40",
+      "createdAt": "2026-07-08T16:04:39.000Z",
+      "name": "Delicate Micro Gold Earrings",
+      "price": 1049,
+      "oldPrice": 1469,
+      "image": "https://drive.google.com/thumbnail?id=1zKNFGFe__b235j8MQLAx2U7V4RofcK6S&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 12,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-41",
+      "createdAt": "2026-07-08T16:04:40.000Z",
+      "name": "Classic Matte Finish Earrings",
+      "price": 1099,
+      "oldPrice": 1539,
+      "image": "https://drive.google.com/thumbnail?id=10v1K25SKXjPaTvPHp1FIxa_7mdux1L8S&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 5,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-42",
+      "createdAt": "2026-07-08T16:04:41.000Z",
+      "name": "Kemp Stone Studded Earrings",
+      "price": 1149,
+      "oldPrice": 1609,
+      "image": "https://drive.google.com/thumbnail?id=1CTFD21_gpiFAnEvp-iQSYwt0XqbrINiI&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 6,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-43",
+      "createdAt": "2026-07-08T16:04:42.000Z",
+      "name": "Designer CZ Stone Earrings",
+      "price": 1199,
+      "oldPrice": 1679,
+      "image": "https://drive.google.com/thumbnail?id=1xTc9pnLsVGHQZCJzZ67iIrOWb9hEYzn6&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 7,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-44",
+      "createdAt": "2026-07-08T16:04:43.000Z",
+      "name": "Floral Meenakari Earrings",
+      "price": 1249,
+      "oldPrice": 1749,
+      "image": "https://drive.google.com/thumbnail?id=1V6yRgYVJqazNLh6kOWkN3RuBPnwLNhAQ&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 8,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-45",
+      "createdAt": "2026-07-08T16:04:44.000Z",
+      "name": "Antique Gold Finish Jhumkas",
+      "price": 199,
+      "oldPrice": 279,
+      "image": "https://drive.google.com/thumbnail?id=1Z1nyx2d5cAUQoYQ1_565cWLDha6MRIFz&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 9,
+      "featured": false
+    },
+    {
+      "id": "prod-jewel-46",
+      "createdAt": "2026-07-08T16:04:45.000Z",
+      "name": "Traditional Kundan Jhumkas",
+      "price": 249,
+      "oldPrice": 349,
+      "image": "https://drive.google.com/thumbnail?id=1wQK4YkM2ABOIYasffVI44PPIK8Vm07fd&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 10,
+      "featured": true
+    },
+    {
+      "id": "prod-jewel-47",
+      "createdAt": "2026-07-08T16:04:46.000Z",
+      "name": "Elegant Pearl Drop Jhumkas",
+      "price": 299,
+      "oldPrice": 419,
+      "image": "https://drive.google.com/thumbnail?id=1iNAhEOv7w7eqIgZnuiMxpxOd5dceFkRG&sz=w1000",
+      "category": "Jewellery",
+      "description": "Stunning fashion accessories and premium traditional ornaments. Hosted securely on Google Drive.",
+      "sizes": [
+        "Free Size"
+      ],
+      "colors": [
+        "Default"
+      ],
+      "stock": 11,
+      "featured": false
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-418611",
+      "createdAt": "2026-07-02T16:02:14.966Z",
+      "status": "Pending",
+      "paymentStatus": "Pending",
+      "customerName": "5100_MUKILARASU_S",
+      "email": "mukilarasu55@gmail.com",
+      "address": "14,2nd Street ,P.Vellalapatti,Karur",
+      "phone": "+919080030538",
+      "items": [
+        {
+          "id": "prod-jewel-1783006663131-41",
+          "name": "Jewellery Item #41",
+          "price": 299,
+          "size": "Free Size",
+          "color": "Default",
+          "image": "http://localhost:5000/uploads/jewel_41_1783006663131.jpeg",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 349
+    }
+  ],
+  "users": [
+    {
+      "id": "USR-578875",
+      "createdAt": "2026-07-02T05:59:31.370Z",
+      "name": "Mukil Arasu",
+      "email": "mukilarasu55@gmail.com",
+      "phone": "+91908003053890800",
+      "address": "14,2nd Street ,P.Vellalapatti,Karur"
+    }
+  ],
+  "inquiries": [],
+  "admins": [],
+  "reviews": [],
+  "cart_activity": [],
+  "homepage_sections": []
+}

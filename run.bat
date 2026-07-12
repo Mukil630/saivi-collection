@@ -1,24 +1,25 @@
 @echo off
+cd /d "%~dp0"
 color 0F
-title SAVI'S collection Launcher
+title SAVI'S Collection Launcher
 echo =======================================================
 echo            SAVI'S COLLECTION STORE LAUNCHER
 echo =======================================================
 echo.
-echo Starting SAVI'S Backend (API Server and Telegram Bot)...
-start "SAVI'S Backend (Port 5000)" cmd /k "color 0F && cd backend && npm run dev"
+echo 1. Starting SAVI'S Backend (Express API and Telegram Bot on Port 5000)...
+start "SAVI'S Backend (Port 5000)" cmd /k "color 0F && cd /d \"%~dp0backend\" && npm run start"
 echo.
-echo Starting SAVI'S Frontend (Vite React Web App)...
-start "SAVI'S Frontend (Port 5173)" cmd /k "color 0F && cd frontend && npm run dev"
+echo 2. Starting SAVI'S Frontend (Vite React Web App on Port 5173)...
+start "SAVI'S Frontend (Port 5173)" cmd /k "color 0F && cd /d \"%~dp0frontend\" && npm run dev"
 echo.
-echo Waiting for servers to initialize...
-timeout /t 3 >nul
+echo Waiting for services to initialize...
+ping 127.0.0.1 -n 4 >nul
 start http://localhost:5173
 echo.
 echo =======================================================
 echo  Launch triggered successfully!
 echo  - Backend running at http://localhost:5000
-echo  - Frontend running at http://localhost:5173
+echo  - Frontend running at http://localhost:5173 (Proxying /api to Backend)
 echo =======================================================
 echo.
 pause

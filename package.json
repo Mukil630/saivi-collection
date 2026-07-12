@@ -2,15 +2,15 @@
   "name": "savis-collection-root",
   "version": "1.0.0",
   "description": "Root configuration for SAVI'S Collection streetwear store",
-  "main": "backend/index.js",
+  "main": "frontend/src/main.jsx",
   "type": "module",
   "scripts": {
-    "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
-    "install-all": "npm run install:backend && npm run install:frontend",
+    "install-all": "npm run install:frontend",
     "build:frontend": "cd frontend && npm run build",
     "build": "npm run install-all && npm run build:frontend",
-    "start": "node backend/index.js"
+    "start": "cd frontend && npm run dev",
+    "sync-products": "node -e \"const fs = require('fs'); const db = JSON.parse(fs.readFileSync('backend/database.json', 'utf8')); fs.writeFileSync('frontend/src/products.json', JSON.stringify(db.products, null, 2), 'utf8'); console.log('Products successfully synced from backend database to frontend catalog!');\""
   },
   "keywords": [],
   "author": "",

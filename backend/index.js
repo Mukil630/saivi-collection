@@ -253,6 +253,43 @@ app.post('/api/upload', requireAdminAuth, async (req, res) => {
     const buffer = Buffer.from(base64Data, 'base64');
     const filename = `apparel_${Date.now()}${extension}`;
 
+    // Read category/folder metadata if passed
+    const reqFilename = req.body.filename;
+    const folderId = req.body.folderId;
+
+    // Try Google Drive Upload via Google Apps Script Web App
+    const appsScriptUrl = process.env.GOOGLE_APPS_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbyNWy-gh3RJMjw9VJKgk1tSA2c_UV53pjFneSUb5aTLDFexRW5n1s7cCEoxNI1cW9gH8g/exec';
+    if (appsScriptUrl) {
+      try {
+        console.log(`[UPLOAD] Sending image to Google Apps Script Web App (folder: ${folderId || 'default'})...`);
+        const response = await fetch(appsScriptUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify({
+            imageBase64: imageBase64,
+            filename: reqFilename || filename,
+            folderId: folderId || '1w5gw8xvWBzXFBJyv366u3F1hEkLLpido'
+          })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success && data.url) {
+            console.log("[UPLOAD] ✅ Uploaded via Google Apps Script Web App directly to Google Drive:", data.url);
+            return res.json({ success: true, imagePath: data.url });
+          } else {
+            console.warn("[UPLOAD] Google Apps Script Web App returned failure status:", data.error);
+          }
+        } else {
+          console.warn("[UPLOAD] Google Apps Script Web App HTTP error:", response.status, response.statusText);
+        }
+      } catch (appsScriptErr) {
+        console.warn("[UPLOAD] Google Apps Script upload failed, checking other methods...", appsScriptErr.message);
+      }
+    }
+
     // Try Supabase Storage Upload
     try {
       const supabaseURL = await uploadToSupabaseStorage(filename, buffer, mimeType);
