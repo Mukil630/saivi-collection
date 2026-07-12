@@ -930,6 +930,37 @@ app.get('/api/config/public', (req, res) => {
 });
 
 // --- ADMIN SYSTEM CONFIGURATION & CLOUD SETUP ---
+app.get('/api/test-supabase-direct', async (req, res) => {
+  try {
+    const supabaseUrl = process.env.SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_KEY;
+    console.log(`[TEST] supabaseUrl: ${supabaseUrl ? "present" : "missing"}, supabaseKey: ${supabaseKey ? "present" : "missing"}`);
+    
+    if (!supabaseUrl || !supabaseKey) {
+      return res.json({ success: false, error: 'Missing credentials in env' });
+    }
+    
+    const filename = `test_live_${Date.now()}.txt`;
+    const url = `${supabaseUrl}/storage/v1/object/savis-images/${filename}`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${supabaseKey}`,
+        'Content-Type': 'text/plain',
+        'x-upsert': 'true'
+      },
+      body: Buffer.from("test data")
+    });
+    
+    const text = await response.text();
+    console.log(`[TEST] Status: ${response.status}, Response: ${text}`);
+    res.json({ status: response.status, body: text });
+  } catch (err) {
+    console.error(`[TEST] Connection error:`, err);
+    res.json({ success: false, error: err.message });
+  }
+});
+
 app.get('/api/admin/config', requireAdminAuth, (req, res) => {
   res.json({
     mongodbUri: process.env.MONGODB_URI || '',
