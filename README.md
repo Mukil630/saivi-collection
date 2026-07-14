@@ -1,5 +1,5 @@
 # 🛍️ SAVI'S COLLECTION | Premium E-Commerce Store
-
+id=file_00000000156c71fabda8df29092cbbb4&ts=495561&p=fs&cid=1&sig=1b1f02f8a43b711f549dfedd7f966c70cfeab48c3472f1e7c657bbc6996bb266&v=0
 **SAVI'S COLLECTION** is an ultra-modern, glassmorphic clothing and jewellery catalog website built using **Vite + React (Frontend)** and **Node.js Express (Backend)**, connected in real-time with **Supabase PostgreSQL** and **Supabase Storage**.
 
 ### 🔗 Live Production Links
